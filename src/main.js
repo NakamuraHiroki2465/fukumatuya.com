@@ -8,7 +8,7 @@ import ZLoader from './components/Parts/ZLoader.vue'
 import MainPage from './components/MainPage.vue'
 
 //GlobalなCSSの設定
-import './assets/stylesheet/globalcss.scss'
+import'./assets/globalcss.scss'
 
 Vue.config.productionTip = false
 

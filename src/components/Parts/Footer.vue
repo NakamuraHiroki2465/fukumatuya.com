@@ -5,9 +5,13 @@
             <p>〒328-0054</p>
             <p>栃木県栃木市平井町681番地</p>
             <p class="Tel">090-1209-9777</p>
+            <a href="https://www.instagram.com/fukumatuya_29028/">
+              Instagram
+              <img src="@/assets/images/instagram.svg" alt="インスタグラム">
+            </a>
         </div>
         <div class="footer-menu">
-          <h3>メニュー</h3>
+          <h3>【メニュー】</h3>
           <ul>
             <router-link tag="li" v-for="menu in menus" :key="menu.key"  :to="menu.url">
               <a>{{menu.text}}</a>
@@ -17,11 +21,11 @@
         <div class="flex-wrap">
           <div class="map-wrapper">
             <div class="map">
-              <h4>アクセス</h4>
+              <h4>【アクセス】</h4>
               <p v-for="(text,index) in access.texts" v-text="text" :key="index"></p>
             </div>
           </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.90404739911!2d139.6964836156249!3d36.36310299988021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f4764d5fca5fb%3A0xe7a985618f29356f!2z56aP5p2-5a62!5e0!3m2!1sja!2sjp!4v1575109150522!5m2!1sja!2sjp" width="300" height="200" frameborder="0" :style="iframeStyle" allowfullscreen=""></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.90404739911!2d139.6964836156249!3d36.36310299988021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f4764d5fca5fb%3A0xe7a985618f29356f!2z56aP5p2-5a62!5e0!3m2!1sja!2sjp!4v1575109150522!5m2!1sja!2sjp" width="200" height="100" frameborder="0"  allowfullscreen=""></iframe>
         </div>
         
     </footer>
@@ -30,19 +34,11 @@
 export default {
     data:function(){
         return{
-            iframeStyle:{
-/*                 border:'0',
-                'position':'absolute',
-                top:'50%',
-                right:'30px',
-                'transform':'translate(-10px,-50%)', */
-                'display':'block'
-            },
             access:{
               texts:[
                 "バス：JR・東武　栃木駅発（関東自動車）",
                 "→　國學院前方面 (倭町経由)",
-                "県道269号線を太平山方面へ直進",
+                "→　県道269号線を太平山方面へ直進",
                 "所要時間：約20分"
               ]
             },
@@ -53,7 +49,7 @@ export default {
                 url:"/",
               },
               {
-                text:"宴会料理のメニュー・料金",
+                text:"メニュー・料金について",
                 key:2,
                 url:"/dinner",
               },
@@ -78,20 +74,25 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@import "@/assets/variables.scss";
+
+
 footer{
-  width:100vw;
-  left:-10vw;
+  width:100%;
   min-width:800px;
-  height:30vh;
+  height:40vh;
   z-index:300;
   background-color:rgba(0,0,0,1);
   color:white;
   position:relative;
   top:40vh;
   display:flex;
+  overflow:hidden;
   .footer-wrapper,.footer-menu,.flex-wrap{
     white-space:nowrap;
     flex:auto;
+    font-family:'はんなり';
+    padding:30px 0 5% 5%!important;
   }
   .footer-wrapper{
     font-family:'はんなり';
@@ -103,11 +104,22 @@ footer{
       font-size:2rem;
       height:2.5rem;
       line-height:2.5rem;
+      margin-bottom:10px;
     }
     p{
       font-size:1.2rem;
       height:2rem;
       line-height:2rem;
+
+    }
+    a{
+      height:3rem!important;
+      line-height:3rem!important;
+      font-size:1.2rem;
+      img{
+        height:2rem;
+        vertical-align:middle;
+      }
     }
   }
   .footer-menu{
@@ -122,6 +134,8 @@ footer{
       li{
         list-style:none;
         cursor:pointer;
+        height:2rem;
+        line-height:2rem;
         a{
           color:white;
           text-decoration:none;
@@ -130,25 +144,39 @@ footer{
     }
   }
   .flex-wrap{
-    display:flex;
     padding:50px 0;
+    @include lg (){
+      display:flex;
+    }
+    iframe{
+      @include lg(){
+        width:300px;
+        height:200px;
+      }
+    }
   }
   .map-wrapper{
-    width:400px;
-    height:25vh;
+    white-space:nowrap;
+    padding-bottom:10px;
     h4,p{
       margin:0;
-      white-space:pre-wrap;
     }
     h4{
-      margin-bottom:10px;
+      @include lg(){
+        margin-bottom:10px;
+      }
     }
     p{
       font-size:1rem;
-      line-height:1.4rem;
-      height:1.4rem;
+      line-height:1.2rem;
+      height:1.2rem;
+      @include lg(){
+        line-height:2rem;
+        height:2rem;
+      }
     }
 
   }
 }
+
 </style>

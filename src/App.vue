@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <z-loader v-if="loading"></z-loader>
-    <TopHeader v-if="!loading"></TopHeader>
-    <router-view></router-view>
+    <div class="wrapper-80">
+      <z-loader v-if="loading"></z-loader>
+      <TopHeader v-if="!loading"></TopHeader>
+      <router-view></router-view>
+    </div>
     <TopFooter v-if="!loading"></TopFooter>
   </div>
 </template>
@@ -24,6 +26,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import '@/assets/variables.scss';
 #app{
   main{
     background-color:rgba(0,0,0,1);
