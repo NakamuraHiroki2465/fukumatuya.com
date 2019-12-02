@@ -79,8 +79,8 @@ export default {
 
 footer{
   width:100%;
-  min-width:800px;
-  height:40vh;
+  min-width:500px;
+  height:35vh;
   z-index:300;
   background-color:rgba(0,0,0,1);
   color:white;

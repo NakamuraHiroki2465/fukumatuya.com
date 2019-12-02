@@ -14,13 +14,13 @@
           </div>
           <div class="menu">
               <ul>
-                  <li><img src="@/assets/images/menu/miryoku-menu.png" alt="福松家の魅力"></li>
+                  <router-link to="/" tag="li"><img src="@/assets/images/menu/miryoku-menu.png" alt="福松家の魅力"></router-link>
                   
-                  <li><img src="@/assets/images/menu/meibutu-menu.png" alt="太平山名物メニュー"></li>
+                  <router-link to="/speciality" tag="li"><img src="@/assets/images/menu/meibutu-menu.png" alt="太平山名物メニュー"></router-link>
 
-                  <li><img src="@/assets/images/menu/enkai-menu.png" alt="宴会場メニュー"></li>
+                  <router-link to="/dinner" tag="li"><img src="@/assets/images/menu/enkai-menu.png" alt="宴会場メニュー"></router-link>
 
-                  <li><img src="@/assets/images/menu/access-menu.png" alt="アクセス"></li>
+                  <router-link to="/access" tag="li"><img src="@/assets/images/menu/access-menu.png" alt="アクセス"></router-link>
               </ul>
           </div>
         </div>
@@ -56,16 +56,18 @@ export default {
 </script>
 <style scoped lang="scss"> 
 header{
-  width:80%;
+  width:100%;
   min-width:800px;
   height:20vh;
-  display:block;
-  background-color:black;
-  position:relative;
-  position:fixed;
+  margin:0 auto;
+  background-color:#f6efdf;
   z-index:200;
   font-family:'はんなり';
-  color:white;
+  color:black;
+  border-bottom:6px solid brown;
+  border-top:6px solid brown;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   .header-wrapper{
     width:100%;
     height:100%;
@@ -73,6 +75,7 @@ header{
     .header-main{
       width:auto;
       margin:auto;
+      padding:20px 0 20px 50px;
       .title,.reservation{
         width:auto;
       }
@@ -91,7 +94,7 @@ header{
           letter-spacing:-0.1rem;
         }
         h1{
-          font-size:2.5rem;
+          font-size:2.2rem;
           height:3rem;
           line-height:3rem!important;
           white-space:nowrap;
@@ -106,7 +109,7 @@ header{
           margin:0;
         }
         p{
-          font-size:2rem;
+          font-size:1.5rem;
           white-space:nowrap;
           line-height:2rem;
           height:2rem;
