@@ -1,0 +1,38 @@
+@font-face{
+  font-family:'07やさしさアンチック';
+  src: url('../fonts/07YasashisaAntique.otf') format('OpenType');
+  font-weight:lighter;
+  font-style:normal;
+}
+@font-face{
+  font-family:'はんなり';
+  src: url('../fonts/Hannari.otf') format('OpenType');
+  font-weight:lighter;
+  font-style:normal;
+}
+@font-face{
+  font-family:'shirahunegyosho';
+  src: url('../fonts/hkgyoiw.ttf') format('TrueType');
+  font-style:normal;
+}
+@font-face{
+  font-family:'gyosho';
+  src: url('../fonts/gyosho.ttf') format('TrueType');
+  font-style:normal;
+}
+
+body{
+    background-image:url('../images/washi-background.jpg');
+    background-repeat:repeat;
+    width:100vw;
+    margin:0;
+}
+.wrapper-80{
+    width:80%;
+    margin:0 10%;
+    position:relative;
+}
+#app{
+    position:relative;
+    height:auto
+}
