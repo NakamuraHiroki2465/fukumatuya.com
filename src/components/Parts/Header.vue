@@ -10,7 +10,7 @@
         </template>
         <div class="header-wrapper columns is-mobile is-marginless">
           <template v-if="!isActive || !sp">
-            <div class="header-main column is-4-desktop is-12-mobile is-marginless is-offset-1-desktop">
+            <div class="header-main column is-4-desktop  is-offset-1-desktop">
                 <div class="title">
                   <h1>福松家</h1>
                   <p class="sub">-栃木市、太平山の割烹-</p>
@@ -28,7 +28,7 @@
             </div>
           </template>
           <template >
-            <div class="menu column is-4-desktop  is-12-mobile is-paddingless is-offset-3-desktop">
+            <div class="menu column is-5-desktop  is-12-mobile is-paddingless">
                 <ul v-if="!sp" class="desktop-menu">
                     <router-link to="/" tag="li"><img src="@/assets/images/menu/miryoku-menu.png" alt="福松家の魅力"></router-link>
                     
@@ -112,12 +112,11 @@ header{
     width:100%;
     display:flex;
     .header-main{
-      width:auto;
       margin:auto;
-      padding:20px 0 20px 50px!important;
+      padding:0 0 0 50px!important;
       @include sp(){
         margin:0;
-        padding:10px 10px;
+        padding:20px 30px!important;
         h1,h4,p{
           line-height:1.2rem!important;
           height:1.2rem!important;
@@ -172,6 +171,7 @@ header{
         ul{
           height:3rem;
           line-height:3rem;
+          
           li{
             font-weight:bold!important;
             &:hover{
@@ -204,7 +204,6 @@ header{
           list-style:none;
           position:relative;
           margin:0;
-          flex:auto;
         }
       }
       img{
