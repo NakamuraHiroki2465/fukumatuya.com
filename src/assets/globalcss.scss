@@ -1,4 +1,5 @@
-/* resources.scss*/
+
+@import 'variables.scss';
 
 @font-face{
   font-family:'07やさしさアンチック';
@@ -27,7 +28,7 @@
 body{
     background-image:url('./images/washi-background.jpg');
     background-repeat:repeat;
-    width:100vw;
+    width:100%;
     margin:0;
     p,li,a,h1,h2,h3,h4{
         font-family:'はんなり'!important;
@@ -45,4 +46,21 @@ body{
 a{
     color:white;
     text-decoration:none;
+}
+@include sp (){
+  p,li,a{
+    font-size:1rem!important;
+  }
+  h1{
+    font-size:1.5rem!important;
+  }
+  h2{
+    font-size:1.3rem!important;
+  }
+  h3{
+    font-size:1.2rem!important;
+  }
+  h4{
+    font-size:1.2rem!important;
+  }
 }

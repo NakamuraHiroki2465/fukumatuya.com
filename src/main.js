@@ -6,10 +6,9 @@ import Topheader from './components/Parts/Header.vue'
 import Topfooter from './components/Parts/Footer.vue'
 import ZLoader from './components/Parts/ZLoader.vue'
 import MainPage from './components/MainPage.vue'
-
 //GlobalなCSSの設定
 import'./assets/globalcss.scss'
-
+import '../node_modules/bulma/bulma.sass';
 Vue.config.productionTip = false
 
 Vue.component('TopHeader',Topheader)
@@ -21,6 +20,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes
 });
+
 new Vue({
   router,
   render: h => h(App),

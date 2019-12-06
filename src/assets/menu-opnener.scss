@@ -1,0 +1,62 @@
+
+/*ナビゲーションヘッダー要素*/
+.header-opener{
+  position:absolute;
+  position:fixed;
+  top:50px;
+  right:50px;
+  width:50px;
+  height:50px;
+  z-index:1000;
+}
+.header-opener span:nth-child(1){
+  display:block;
+  position:absolute;
+  left:0;
+  width:50px;
+  height:4px;
+  background-color:black;
+}
+.header-opener span:nth-child(2){
+  display:block;
+  position:absolute;
+  left:0;
+  width:50px;
+  height:4px;
+  background-color:black;
+}
+.header-opener span:nth-child(3){
+  display:block;
+  position:absolute;
+  left:0;
+  width:50px;
+  height:4px;
+  background-color:black;
+}
+.header-opener .open:nth-child(1){
+  transform:translateY(0)rotate(0)scaleX(1);
+}
+.header-opener .open:nth-child(2){
+  transform:translateY(15px)translateX(0);
+  opacity:1;
+}
+.header-opener .open:nth-child(3){
+  transform:translateY(30px)rotate(0)scaleX(1);
+}
+.header-opener .close:nth-child(1){
+  transform:translateY(15px)rotate(135deg)scaleX(1.4);
+}
+.header-opener .close:nth-child(2){
+  transform:translateY(15px)translateX(100px);
+  opacity:0;
+  top:30px;
+}
+.header-opener .close:nth-child(3){
+  transform:translateY(15px)rotate(-135deg)scaleX(1.4);
+}
+.header-opener .open,.close{
+  transition: transform 0.5s ease-in;
+}
+.header-opener .close{
+  background-color:white!important;
+}

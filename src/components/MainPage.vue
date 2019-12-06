@@ -1,8 +1,4 @@
-<template>
-    <div>
-        
-    </div>
-</template>
+
 <script>
 
 export default {
@@ -10,5 +6,8 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+    .columns{
+        width:100%;
+    }
 
 </style>

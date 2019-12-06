@@ -1,16 +1,17 @@
 <template>
-    <footer id="menu-footer">
-        <div class="footer-wrapper">
+    <footer id="menu-footer is">
+      <div class="columns is-multiline flex">
+        <div class="footer-wrapper column is-3 is-12-mobile has-text-centered-mobile">
             <h1>福松家</h1>
             <p>〒328-0054</p>
             <p>栃木県栃木市平井町681番地</p>
             <p class="Tel">090-1209-9777</p>
-            <a href="https://www.instagram.com/fukumatuya_29028/">
+            <a  href="https://www.instagram.com/fukumatuya_29028/">
               Instagram
               <img src="@/assets/images/instagram.svg" alt="インスタグラム">
             </a>
         </div>
-        <div class="footer-menu">
+        <div class="footer-menu column is-3 is-12-mobile has-text-centered-mobile">
           <h3>【メニュー】</h3>
           <ul>
             <router-link tag="li" v-for="menu in menus" :key="menu.key"  :to="menu.url">
@@ -18,7 +19,7 @@
             </router-link>
           </ul>
         </div>
-        <div class="flex-wrap">
+        <div class="flex-wrap column is-3 is-12-mobile has-text-centered-mobile">
           <div class="map-wrapper">
             <div class="map">
               <h4>【アクセス】</h4>
@@ -27,7 +28,7 @@
           </div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.90404739911!2d139.6964836156249!3d36.36310299988021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f4764d5fca5fb%3A0xe7a985618f29356f!2z56aP5p2-5a62!5e0!3m2!1sja!2sjp!4v1575109150522!5m2!1sja!2sjp" width="200" height="100" frameborder="0"  allowfullscreen=""></iframe>
         </div>
-        
+      </div>       
     </footer>
 </template>
 <script>
@@ -79,18 +80,19 @@ export default {
 
 footer{
   width:100%;
-  min-width:500px;
-  height:35vh;
+  height:auto;
   z-index:300;
   background-color:rgba(0,0,0,1);
   color:white;
   position:relative;
   top:40vh;
-  display:flex;
   overflow:hidden;
+  .flex{
+    width:100%;
+    display:flex;
+  }
   .footer-wrapper,.footer-menu,.flex-wrap{
     white-space:nowrap;
-    flex:auto;
     font-family:'はんなり';
     padding:30px 0 5% 5%!important;
   }
@@ -116,6 +118,7 @@ footer{
       height:3rem!important;
       line-height:3rem!important;
       font-size:1.2rem;
+      color:white;
       img{
         height:2rem;
         vertical-align:middle;
