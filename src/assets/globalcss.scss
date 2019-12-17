@@ -31,8 +31,9 @@ body{
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     width:100%;
     margin:0;
-    p,li,a,h1,h2,h3,h4{
+    p,li,a,h1,h2,h3,h4,th,td{
         font-family:'はんなり'!important;
+        font-weight:bold;
     }
 }
 .wrapper-80{
@@ -65,10 +66,13 @@ a{
   h4{
     font-size:1.2rem!important;
   }
+  th{
+    font-size:1.2rem!important;
+  }
 }
 .wrapper60{
   width:60%;
-  margin:50px auto;
+  margin:50px auto!important;
   @include md(){
       width:80%;
   }
