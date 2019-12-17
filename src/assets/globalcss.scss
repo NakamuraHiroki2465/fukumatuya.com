@@ -26,8 +26,9 @@
 
 
 body{
-    background-image:url('./images/washi-background.jpg');
-    background-repeat:repeat;
+  background-color: #fffaeb;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     width:100%;
     margin:0;
     p,li,a,h1,h2,h3,h4{
@@ -36,7 +37,8 @@ body{
 }
 .wrapper-80{
     width:80%;
-    margin:0 10%;
+    margin-right:10%!important;
+    margin-left:10% !important;
     position:relative;
 }
 #app{

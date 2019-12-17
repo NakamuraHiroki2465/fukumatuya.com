@@ -1,10 +1,10 @@
 import Enkai from './components/FoodMenu/Enkai.vue'
-import FoodMenu from './components/FoodMenu/FoodMenu.vue'
-import Meibutu from './components/FoodMenu/Meibutu.vue'
+import Lunch from './components/FoodMenu/lunch.vue'
 import MainPage from './components/MainPage.vue'
-import Form from './components/form.vue'
-import Info from './components/info.vue'
+import Contact from './components/contact.vue'
+import Ohirasan from './components/Ohirasan.vue'
 import Recruit from './components/recruit.vue'
+import About from './components/About.vue'
 
 
 export const routes = [
@@ -17,20 +17,20 @@ export const routes = [
         component: Enkai
     },
     {
-        path:'/menu',
-        component: FoodMenu
+        path:'/lunch',
+        component: Lunch
     },
     {
-        path:'/speciality',
-        component: Meibutu
+        path:'/about',
+        component:About
     },
     {
-        path:'/form',
-        component: Form
+        path:'/contact',
+        component: Contact
     },
     {
-        path:'/tourisminfo',
-        component: Info
+        path:'/ohirasan',
+        component: Ohirasan
     },
     {
         path:'/recruit',

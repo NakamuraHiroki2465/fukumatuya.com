@@ -10,9 +10,9 @@
         </template>
         <div class="header-wrapper columns is-mobile is-marginless">
           <template v-if="!isActive || !sp">
-            <div class="header-main column is-4-desktop  is-offset-1-desktop">
+            <div class="header-main column is-3-desktop  is-offset-1-desktop">
                 <div class="title">
-                  <h1>福松家</h1>
+                  <router-link to="/" tag="h1">福松家</router-link>
                   <p class="sub">-栃木市、太平山の割烹-</p>
                 </div>
                 <div class="reservation ">
@@ -30,13 +30,29 @@
           <template >
             <div class="menu column is-5-desktop  is-12-mobile is-paddingless">
                 <ul v-if="!sp" class="desktop-menu">
-                    <router-link to="/" tag="li"><img src="@/assets/images/menu/miryoku-menu.png" alt="福松家の魅力"></router-link>
+                    <router-link to="/about" tag="li"><img class="main" src="@/assets/images/menu/about.png" alt="福松家について"></router-link>
                     
-                    <router-link to="/speciality" tag="li"><img src="@/assets/images/menu/meibutu-menu.png" alt="太平山名物メニュー"></router-link>
+                    <router-link to="/lunch" tag="li"><img class="main" src="@/assets/images/menu/lunch.png" alt="茶屋"></router-link>
 
-                    <router-link to="/dinner" tag="li"><img src="@/assets/images/menu/enkai-menu.png" alt="宴会場メニュー"></router-link>
-
-                    <router-link to="/access" tag="li"><img src="@/assets/images/menu/access-menu.png" alt="アクセス"></router-link>
+                    <router-link to="/dinner" tag="li"><img class="main" src="@/assets/images/menu/dinner.png" alt="懐石料理"></router-link>
+                    
+                    <!-- サブメニュー -->
+                    <router-link to="/contact" class="vertical sub" tag="li">
+                      <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お問い合わせ">
+                      <p>お問い合わせ</p>
+                    </router-link>
+                    <router-link to="/recruit" class="vertical sub" tag="li">
+                      <img class="icon" src="@/assets/images/bottomvector.svg" alt="採用情報">
+                      <p>採用情報</p>
+                    </router-link>
+                    <router-link to="/access" class="vertical sub" tag="li">
+                      <img class="icon" src="@/assets/images/bottomvector.svg" alt="アクセス">
+                      <p>アクセス</p>
+                    </router-link>
+                    <router-link to="/ohirasan" class="vertical sub" tag="li">
+                      <img class="icon" src="@/assets/images/bottomvector.svg" alt="太平山について">
+                      <p>太平山について</p>
+                    </router-link>
                 </ul>
                 <ul v-if="sp && isActive" class="sp-menu">
                     <router-link to="/" tag="li"><p>福松家の魅力</p></router-link>
@@ -149,6 +165,7 @@ header{
           line-height:3rem;
           white-space:nowrap;
           font-weight:bold;
+          cursor:pointer;
         }
       }
       .reservation{
@@ -185,7 +202,6 @@ header{
       }
     }
     .menu{
-      padding-left:50px!important;
       @include sp(){
         width:calc(100% - 60px);
         margin:0 auto;
@@ -206,7 +222,7 @@ header{
           margin:0;
         }
       }
-      img{
+      .main{
         height:138px;
         min-width:80px;
         transition:border 0.5s;
@@ -243,5 +259,20 @@ header{
     }
   }
 }
+.vertical{
+  writing-mode:vertical-rl;
+  position:relative;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:25px;
+  cursor:pointer;
+}
+.icon{
+  width:1.2rem;
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
 
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <vueper-slides fade slide-content-outside="top" slide-content-outside-class="max-widthed" :touchable="false" :slide-ratio="0.4" >
+    <vueper-slides fade slide-content-outside="top" slide-content-outside-class="max-widthed" :touchable="false" :slide-ratio="0.35" >
         <vueper-slide
          v-for="(url,i) in urls" 
          :key="i" 
@@ -62,6 +62,6 @@ export default {
   transform: scale(0);
 }
 .vueperslides{
-    padding:50px 0!important;
+    padding:0 0!important;
 }
 </style>

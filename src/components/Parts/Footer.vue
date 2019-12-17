@@ -19,15 +19,7 @@
             </router-link>
           </ul>
         </div>
-        <div class="flex-wrap column is-3 is-12-mobile has-text-centered-mobile">
-          <div class="map-wrapper">
-            <div class="map">
-              <h4>【アクセス】</h4>
-              <p v-for="(text,index) in access.texts" v-text="text" :key="index"></p>
-            </div>
-          </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.90404739911!2d139.6964836156249!3d36.36310299988021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f4764d5fca5fb%3A0xe7a985618f29356f!2z56aP5p2-5a62!5e0!3m2!1sja!2sjp!4v1575109150522!5m2!1sja!2sjp" width="200" height="100" frameborder="0"  allowfullscreen=""></iframe>
-        </div>
+        
       </div>       
     </footer>
 </template>
@@ -35,14 +27,6 @@
 export default {
     data:function(){
         return{
-            access:{
-              texts:[
-                "バス：JR・東武　栃木駅発（関東自動車）",
-                "→　國學院前方面 (倭町経由)",
-                "→　県道269号線を太平山方面へ直進",
-                "所要時間：約20分"
-              ]
-            },
             menus:[
               {
                 text:"福松家について",
@@ -85,7 +69,7 @@ footer{
   background-color:rgba(0,0,0,1);
   color:white;
   position:relative;
-  top:40vh;
+  top:50px;
   overflow:hidden;
   .flex{
     width:100%;
