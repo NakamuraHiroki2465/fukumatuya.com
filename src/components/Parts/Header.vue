@@ -57,7 +57,7 @@
                 <ul v-if="sp && isActive" class="sp-menu">
                     <router-link to="/" tag="li"><p>福松家の魅力</p></router-link>
                     
-                    <router-link to="/speciality" tag="li"><p>太平山の名物メニュー</p></router-link>
+                    <router-link to="/lunch" tag="li"><p>太平山の名物メニュー</p></router-link>
 
                     <router-link to="/dinner" tag="li"><p>宴会場メニュー</p></router-link>
 

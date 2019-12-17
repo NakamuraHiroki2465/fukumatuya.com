@@ -1,11 +1,7 @@
 <template>
     <div class="about-wrapper">
         <div class="wrapper-60">
-            <div class="main-title">
-                <img :src='header.img' alt="メイン背景">
-                <h1 class="main-title" v-text="header.title"></h1>
-            </div>
-            <div class="vfor" v-for="data in this.datas" :key="data.title">
+            <div class="vfor" v-for="data in this.subdatas" :key="data.title">
                 <h2  class="title" v-text="data.title"></h2>
                 <div class="center-wrapper columns ">
                     <div class="about-container column is-7">
@@ -25,8 +21,7 @@
 <script>
 export default {
     props:[
-        'datas',
-        'header'
+        'subdatas',
     ]
 }
 </script>
@@ -35,27 +30,7 @@ export default {
 .vfor{
     margin:100px auto;
 }
-.main-title{
-    height:200px;
-    margin-top:100px;
-    margin-bottom:100px;
-    position:relative;
-    img{
-        width:100%;
-        top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-        position:absolute;
-    }
-    h1{
-        font-size:2.5rem;
-        font-weight:bold;
-        text-align:center;
-        height:200px;
-        line-height:200px;
-        color:white;
-    }
-}
+
 .wrapper-60{
     width:60%;
     margin:50px auto;

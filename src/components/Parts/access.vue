@@ -24,6 +24,7 @@
 </template>
 <script>
 export default {
+
     data:function(){
         return{
             access:{
@@ -39,12 +40,14 @@ export default {
                   "片柳町5丁目の交差点（目印:マクドナルド）を右折"
               ]
             },
+            is60:false
         }
     }
 }
 </script>
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
+
 h4{
     font-size:1.7rem;
     font-weight:bold;
@@ -57,7 +60,7 @@ h4{
     }
 }
 .wrap{
-    width:70%;
+    width:60%;
     margin:auto;
     font-weight:bold;
     margin: 50px auto 0 auto;
@@ -73,7 +76,7 @@ h4{
     white-space:nowrap;
     padding-bottom:10px;
     @include sp(){
-        width:60%;
+        width:90%;
         margin:auto;
     }
     h4,p{
@@ -109,7 +112,6 @@ h4{
         }
         p{
             font-size:1rem;
-
         }
     }
     .car-wrapper{

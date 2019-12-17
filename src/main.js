@@ -7,6 +7,7 @@ import Topfooter from './components/Parts/Footer.vue'
 import ZLoader from './components/Parts/ZLoader.vue'
 import MainPage from './components/MainPage.vue'
 import detail from './components/Parts/detail.vue'
+import subdetail from './components/Parts/subdetail.vue'
 //GlobalなCSSの設定
 import'./assets/globalcss.scss'
 import '../node_modules/bulma/bulma.sass';
@@ -22,6 +23,7 @@ Vue.component('TopFooter',Topfooter)
 Vue.component('z-loader',ZLoader)
 Vue.component('MainPage',MainPage)
 Vue.component('detail',detail)
+Vue.component('subdetail',subdetail)
 
 Vue.use(VueRouter)
 const router = new VueRouter({
