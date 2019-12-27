@@ -101,7 +101,7 @@ h4{
     .bus-wrapper,.car-wrapper{
         border: 2px solid brown;
         position:relative;
-        height:calc(auto + 150px);
+        height:auto;
         padding-top:50px;
         padding-bottom:30px;
         @include lg(){
