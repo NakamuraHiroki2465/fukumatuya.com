@@ -10,7 +10,7 @@
   "dependencies": {
     "buefy": "^0.8.8",
     "core-js": "^3.4.3",
-    "jquery": "^2.2.4",
+    "jquery": "^3.4.0",
     "vue": "^2.6.10",
     "vue-carousel": "^0.18.0",
     "vue-router": "^3.1.3",
