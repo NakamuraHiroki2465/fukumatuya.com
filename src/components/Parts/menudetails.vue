@@ -14,11 +14,10 @@
                     </div>  
                 </div>
                 <div class="sub-menu" v-if="main.relatemenu">
-                    <p class="sub-title">料理を使ったメニュー</p>
+                    <p class="sub-title sub-text">料理を使ったメニュー</p>
                     <div class="image-wrapper columns">
-                        <div class="image column is-3" v-for="relatemenu in main.relatemenu" :key="relatemenu.name">
-                            <p v-text="relatemenu.name"></p>
-                            <p>{{relatemenu.price}}&nbsp;円</p>
+                        <div class="image column is-4" v-for="relatemenu in main.relatemenu" :key="relatemenu.name">
+                            <p class="sub-text" v-text="relatemenu.name"></p>
                         </div>
                     </div>
                 </div>
@@ -84,10 +83,10 @@ export default {
         font-weight:bold;
         font-size:1.2rem;
         text-align:left;
-        white-space:nowrap;
+        white-space:nowrap!important;
         @include sp(){
             text-align:center;
-            margin:10px 0;
+            margin:5px 0;
         }
     }
 }
@@ -102,9 +101,10 @@ export default {
     justify-content:space-between;
 }
 .sub-menu{
-    padding:50px 0;
+    margin:50px 0;
+    padding:10px 10px;
     @include sp(){
-        padding:50px 0;
+        padding:10px 10px;
     }
     .sub-title{
         border-bottom:1px solid brown;
@@ -132,4 +132,5 @@ export default {
         }
     }
 }
+
 </style>

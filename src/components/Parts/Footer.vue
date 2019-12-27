@@ -1,7 +1,7 @@
 <template>
     <footer id="menu-footer is">
       <div class="columns is-multiline flex">
-        <div class="footer-wrapper column is-3 is-12-mobile has-text-centered-mobile">
+        <div class="footer-wrapper column is-3 is-offset-2 is-12-mobile has-text-centered-mobile">
             <h1>福松家</h1>
             <p>〒328-0054</p>
             <p>栃木県栃木市平井町681番地</p>
@@ -34,19 +34,19 @@ export default {
                 url:"/",
               },
               {
-                text:"メニュー・料金について",
+                text:"会席料理について",
                 key:2,
                 url:"/dinner",
               },
               {
-                text:"ご予約・お問い合わせはこちら",
+                text:"茶屋について",
                 key:3,
-                url:"/form",
+                url:"/lunch"
               },
               {
-                text:"太平山の観光はこちら",
+                text:"ご予約・お問い合わせはこちら",
                 key:4,
-                url:"/tourisminfo"
+                url:"/contact",
               },
               {
                 text:"採用情報",

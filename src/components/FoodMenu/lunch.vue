@@ -3,7 +3,13 @@
         <detail :datas="datas" :header="header"></detail>
         <subdetail :subdatas="subdatas"></subdetail>
         <lunchslideshow></lunchslideshow>
+        <div class="wrapper60">
+            <p class="menu-title has-text-centered">代表的なメニュー</p>
+        </div>
         <menudetails :mains="mains"></menudetails>
+        <div class="wrapper60">
+            <p class="menu-title has-text-centered">全てのメニュー</p>
+        </div>
         <div class="wrapper60 menu-wrapper columns  is-multiline">
             <table class="menu column is-5 is-offset-1 ">
                 <tr>
@@ -86,16 +92,13 @@ export default {
                     alt:'玉子焼きイラスト',
                     relatemenu:[
                         {
-                            name:'玉子焼き（単品)',
-                            price:'350'
+                            name:'玉子焼き（単品) 350円',
                         },
                         {
-                            name:'玉子焼き定食',
-                            price:'750',
+                            name:'玉子焼き定食 750円',
                         },
                         {
-                            name:'焼き鳥玉子焼き定食',
-                            price:'1380'
+                            name:'焼き鳥玉子焼き定食 1380円',
                         }
                     ]
                 },
@@ -107,16 +110,13 @@ export default {
                     alt:'焼き鳥イラスト',
                     relatemenu:[
                         {
-                            name:'焼き鳥（単品）',
-                            price:'540'
+                            name:'焼き鳥（単品) 540円',
                         },
                         {
-                            name:'焼き鳥定食',
-                            price:'940'
+                            name:'焼き鳥定食 940円',
                         },
                         {
-                            name:'焼き鳥玉子焼き定食',
-                            price:'1380'
+                            name:'焼き鳥玉子焼き定食 1380円',
                         }
                     ]
                 },
@@ -206,11 +206,11 @@ export default {
                 },
                 {
                     name:'ジュース各種',
-                    price:'210円'
+                    price:'210'
                 },
                 {
                     name:'お酒各種',
-                    price:'420円'
+                    price:'420'
                 }
             ]
         }
@@ -240,5 +240,8 @@ export default {
     tr{
         border-bottom:1px solid brown;
     }
+}
+.menu-title{
+    font-size:2rem!important;
 }
 </style>

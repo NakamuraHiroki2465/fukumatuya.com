@@ -80,3 +80,56 @@ a{
       width:90%;
   }
 }
+.sub-text{
+  color:rgba(0,0,0,0.7)!important;
+  font-size:1.1rem!important;
+}
+.absolute{
+  position:absolute;
+}
+.relative{
+  position:relative;
+}
+.detail{
+  border-bottom:1px solid brown;
+  font-weight:bold;
+  width:60%;
+  @include sp(){
+      width:100%;
+      margin:auto;
+  }
+  .info_name{
+      color:brown;
+  }
+}
+.for_access{
+  border:1px solid black;
+  padding:10px 10px;
+  background-color:rgba(0,0,0,0.8);
+  margin:10px;
+  @include sp(){
+    margin:10px auto;
+  }
+  a{
+      color:white!important;
+      list-style:none;
+      cursor:pointer;
+      p{
+          text-align:center;
+      }
+  }
+  li{
+    color:white!important;
+    list-style:none;
+    cursor:pointer;
+    p{
+        text-align:center;
+    }
+}
+  .absolute{
+      top:50%;
+      left:5px;
+      width:30px!important;
+      transform:translateY(-50%);
+  }
+}

@@ -1,21 +1,24 @@
 <template>
-    <div class="about-wrapper">
+    <div class="about-wrapper" id="menu">
         <div class="wrapper-60">
-            <div class="main-title">
-                <img :src='header.img' alt="メイン背景">
-                <h1 class="main-title" v-text="header.title"></h1>
-            </div>
             <div class="vfor" v-for="data in this.datas" :key="data.title">
                 <h2  class="title" v-text="data.title"></h2>
                 <div class="center-wrapper columns">
-                    <div class="about-container column is-7">
+                    <div class="about-container column is-6">
                         <div class="about-text ">
                             <p v-text="data.text"></p>
                         </div>
+                        <p class="price-title columns">コース料金</p>
+                        <div class="price_info_list flex-wrapper">
+                            <div class="price_info" v-for="menu in data.menu" :key="menu.price">
+                                <p class="price">{{menu.price}}</p>
+                            </div>
+                        </div>
                     </div>  
-                    <div class="image column is-5">
-                        <img :src='data.img' alt="料理長のご挨拶">
-                        <p v-text="data.imgtitle"></p>
+                    <div class="image-container column is-6">
+                        <div class="image-wrapper">
+                            <img :src="data.img" :alt="data.alt">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,8 +28,7 @@
 <script>
 export default {
     props:[
-        'datas',
-        'header'
+        'datas'
     ]
 }
 </script>
@@ -111,5 +113,34 @@ export default {
 }
 .center-wrapper{
     justify-content:space-between;
+}
+.price{
+    font-size:1.5rem;
+    font-weight:bold;
+}
+.price_info{
+    margin:15px 0;
+    p{
+        font-size:1.5rem!important;
+        margin:0 10px;
+    }
+}
+.image-wrapper{
+    width:90%;
+    overflow:hidden;
+    margin:auto;
+    text-align:center;
+    img{
+        width:inherit;
+        height:inherit;
+    }
+}
+.price-title{
+    margin:30px 0;
+    font-size:1.5rem!important;
+}
+.flex-wrapper{
+    display:flex;
+    border:5px double #cc9900;
 }
 </style>

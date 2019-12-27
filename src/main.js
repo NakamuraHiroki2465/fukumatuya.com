@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Buefy from 'buefy'
+import vueScrollTo from 'vue-scrollto'
+import 'buefy/dist/buefy.css'
 import {routes} from './routes'
 import App from './App.vue'
 import Topheader from './components/Parts/Header.vue'
@@ -26,8 +29,17 @@ Vue.component('detail',detail)
 Vue.component('subdetail',subdetail)
 
 Vue.use(VueRouter)
+Vue.use(Buefy)
+Vue.use(vueScrollTo)
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+       return savedPosition
+    } else {
+       return { x: 0, y: 0 }
+    }
+  }
 });
 
 new Vue({

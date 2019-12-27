@@ -6,15 +6,15 @@
         </div>
         <InfoComponent :messages="messages">
         </InfoComponent>
-        <div class="sub-info columns is-mobile is-multiline">
-            <div class="aboutfukumatuya column is-4 is-8-mobile is-offset-2">
+        <div class="sub-info columns is-multiline">
+            <router-link to="/about" tag="div" class="aboutfukumatuya column is-4 is-offset-2">
                 <img src="@/assets/images/fukumatuya.jpg" alt="福松家外観">
                 <p class="aboutinfo">福松家について</p>
-            </div>
-            <div class="oohira-san column is-4 is-8-mobile ">
+            </router-link>
+            <router-link to="/oohirasan" tag="div" class="oohira-san column is-4">
                 <img src="@/assets/images/oohirasan.jpg" alt="太平山の観光">
                 <p class="aboutinfo">太平山観光について</p>
-            </div>
+            </router-link>
         </div>
         <div class="detail-info">
             <div class="detail columns is-mobile" v-for="info in infos" :key="info.name">
@@ -36,21 +36,25 @@ export default {
         return{
             messages:[
                 {
-                    title:"割烹料理（完全予約制）",
-                    subtitle:"店主自慢の極上創作料理",
+                    title:"会席料理（完全予約制）",
+                    subtitle:"店主自慢の創作料理",
                     mainMessage:"都会を離れ大自然の中、清流の響き鳥のさえずりを聞きながら日本料理に舌鼓。お客様が心身共にリフレッシュしていただくことをモットーに、ゆったりとした一時を過ごしていただけます。手作りにこだわり個室のお座敷にて創作料理を堪能していただきます。",
                     frontimage:require('@/assets/images/enkai-basic.jpg'),
                     frontalt:"宴会場スタンダードコース",
-                    detail:"コース詳細・料金一覧"
+                    detail:`ご予約はこちらまで 090-1209-9777`,
+                    url:'/dinner',
+                    room:'お部屋をみる'
                 },
                 {
                     title:"太平山観光の休憩に",
                     subtitle:"太平山名物と共に一息",
-                    mainMessage:"",
+                    mainMessage:"創業は120年前。当時から伝統を守りながら、太平山の麓で懐かしみのある味を提供しております。太平山へ観光や登山で訪れた人々の疲れを癒し、時間を忘れてゆったりとできます。",
                     frontimage:require('@/assets/images/greeting-wrapper.jpg'),
                     frontalt:"店舗外観",
                     detail:"メニュー詳細・料金一覧",
-                    detail2:"太平山観光について"
+                    detail2:"太平山観光について",
+                    url:'/lunch',
+                    room:'店内の様子'
                 }
             ],
             infos:[
@@ -64,7 +68,7 @@ export default {
                 },
                 {
                     name:"営業時間",
-                    value:"9:00~18:00 (予約時の時間は異なります))"
+                    value:"9:00〜18:00 (予約時の時間は異なります))"
                 },
                 {
                     name:"定休日",
@@ -92,7 +96,7 @@ export default {
         width:2px;
         height:200px;
         background-color:black;
-        z-index:999;
+        z-index:500;
         @include sp(){
             height:100px;
         }
@@ -105,7 +109,7 @@ export default {
         width:15px;
         height:2px;
         background-color:black;
-        z-index:999;
+        z-index:500;
         transform:translateX(-100%)rotate(45deg);
         transform-origin:100% 100%;
         @include sp(){
@@ -128,7 +132,7 @@ export default {
         color:white;
         top:80%;
         left:calc(20% + 30px);
-        z-index:1000;
+        z-index:500;
     }
     &:after{
         content:'';
@@ -138,7 +142,7 @@ export default {
         width:2px;
         height:200px;
         background-color:white;
-        z-index:1000;
+        z-index:500;
         @include sp(){
             height:100px;
         }
@@ -148,6 +152,11 @@ export default {
     margin-top:50px;
     .aboutfukumatuya,.oohira-san{
         position:relative;
+        cursor:pointer;
+        @include sp(){
+            margin:auto;
+            width:80%;
+        }
     }
 }
 .aboutinfo{

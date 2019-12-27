@@ -19,49 +19,46 @@
                   <h4>ご予約はこちらまで</h4>
                   <p class="phonenumber">電話番号:0282-22-1827</p>
                 </div>
-                <div class="sub-menu" v-if="sp">
-                  <ul class="columns is-mobile">
-                    <router-link to="/dinner" tag="li" class="column is-6">メニュー</router-link>
-                    <li class="column is-6"><a href="https://www.instagram.com/fukumatuya_29028/">ギャラリー</a></li>
-                  </ul>
-                </div>
             </div>
           </template>
           <template >
-            <div class="menu column is-5-desktop  is-12-mobile is-paddingless">
-                <ul v-if="!sp" class="desktop-menu">
-                    <router-link to="/about" tag="li"><img class="main" src="@/assets/images/menu/about.png" alt="福松家について"></router-link>
-                    
-                    <router-link to="/lunch" tag="li"><img class="main" src="@/assets/images/menu/lunch.png" alt="茶屋"></router-link>
-
+            <div v-if="!sp" class="menu column is-5-desktop  is-12-mobile is-paddingless">
+                <ul  class="desktop-menu">
                     <router-link to="/dinner" tag="li"><img class="main" src="@/assets/images/menu/dinner.png" alt="懐石料理"></router-link>
+
+                    <router-link to="/lunch" tag="li"><img class="main" src="@/assets/images/menu/lunch.png" alt="茶屋"></router-link>
                     
+                    <router-link to="/about" tag="li"><img class="main" src="@/assets/images/menu/about.png" alt="福松家について"></router-link>
+        
                     <!-- サブメニュー -->
                     <router-link to="/contact" class="vertical sub" tag="li">
                       <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お問い合わせ">
                       <p>お問い合わせ</p>
                     </router-link>
-                    <router-link to="/recruit" class="vertical sub" tag="li">
-                      <img class="icon" src="@/assets/images/bottomvector.svg" alt="採用情報">
-                      <p>採用情報</p>
-                    </router-link>
                     <router-link to="/access" class="vertical sub" tag="li">
                       <img class="icon" src="@/assets/images/bottomvector.svg" alt="アクセス">
                       <p>アクセス</p>
                     </router-link>
-                    <router-link to="/ohirasan" class="vertical sub" tag="li">
-                      <img class="icon" src="@/assets/images/bottomvector.svg" alt="太平山について">
-                      <p>太平山について</p>
-                    </router-link>
+
                 </ul>
                 <ul v-if="sp && isActive" class="sp-menu">
-                    <router-link to="/" tag="li"><p>福松家の魅力</p></router-link>
+                  <div class="main-wrapper">
+                    <div class="flex-item">
+                      <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">福松家の魅力</p></router-link>
+                      
+                      <router-link to="/lunch" tag="li" class="main_menu"><p @click="hasMenu">茶屋紹介</p></router-link>
+
+                      <router-link to="/dinner" tag="li" class="main_menu"><p @click="hasMenu">会席料理紹介</p></router-link>
+                    </div>
+                  </div>
+                  <div class="sub-wrapper">
+                    <router-link  to="/contact" tag="li"><p @click="hasMenu">お問い合わせ</p></router-link>
                     
-                    <router-link to="/lunch" tag="li"><p>太平山の名物メニュー</p></router-link>
-
-                    <router-link to="/dinner" tag="li"><p>宴会場メニュー</p></router-link>
-
-                    <router-link to="/access" tag="li"><p>アクセス</p></router-link>
+                    <router-link to="/access" tag="li"><p @click="hasMenu">アクセス</p></router-link>
+                  </div>
+                  <div class="instagram">
+                    <a href="https://www.instagram.com/fukumatuya_29028/">Follow Instagram</a>
+                  </div>
                 </ul>
             </div>
           </template> 
@@ -115,7 +112,7 @@ header{
   height:150px;
   margin:0 auto;
   background-color:#f6efdf;
-  z-index:301;
+  z-index:501;
   font-family:'はんなり';
   color:black;
   border-bottom:6px solid brown;
@@ -165,23 +162,33 @@ header{
           line-height:3rem;
           white-space:nowrap;
           font-weight:bold;
+          padding-left:10px;
           cursor:pointer;
         }
       }
       .reservation{
+        border:5px double brown;
+        padding:0 10px;
+        margin:3px auto;
+        margin-left:0;
+        height:5rem;
+        width:260px;
         h4{
           white-space:nowrap;
           font-size:1.2rem;
-          line-height:2rem;
-          height:2rem;
+          line-height:2rem!important;
+          height:2rem!important;
           margin:0;
         }
         p{
           font-size:1.5rem;
           white-space:nowrap;
-          line-height:2rem;
-          height:2rem;
+          line-height:3rem!important;
+          height:3rem!important;
           margin:0;
+          @include sp(){
+            font-size:1.5rem!important;
+          }
         }
       }
       .sub-menu{
@@ -235,25 +242,26 @@ header{
       }
       .sp-menu{
         width:100vw;
-        height:300px;
+        height:50vh;
         left:0;
         right:0;
         top:0;
         position:absolute;
-        background-color:black;
+        background-color:#660000;
         position:fixed;
         margin:auto;
+        margin-left:0;
         z-index:500;
         li{
-          height:75px;
-          line-height:75px;
+          height:60px;
+          line-height:60px;
            &:hover{
             cursor:pointer;
           }
         }
         p{
           text-align:center;
-          color:white;
+          color:#c0c0c0;
         }
       }
     }
@@ -274,5 +282,48 @@ header{
   left:50%;
   transform:translateX(-50%);
 
+}
+.main_menu{
+  p{
+    color:#f5f5f5!important;
+    font-size:1.3rem!important;
+  }
+}
+.main-wrapper{
+  border-bottom:1px solid white;
+  width:80%;
+  margin:auto;
+  height:60%;
+  display:flex;
+  position:relative;
+}
+.sub-wrapper{
+  width:80%;
+  margin:auto;
+  border-bottom:1px solid white;
+  li{
+    height:40px!important;
+    line-height:40px!important;
+  }
+}
+.instagram{
+  width:80%;
+  margin:auto;
+  text-align:center;
+  position:relative;
+  margin-top:15px;
+  a{
+    color:rgba(255,255,255,0.7);
+    font-size:1.3rem!important;
+  }
+}
+.flex-item{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  height:180px;
 }
 </style>

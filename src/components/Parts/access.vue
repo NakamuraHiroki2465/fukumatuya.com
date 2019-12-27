@@ -1,7 +1,7 @@
 <template>
 <div class="wrap">
     <h4>【アクセス】</h4>
-    <div class="flex-wrap columns ">
+    <div class="flex-wrap columns">
         <div class="map-wrapper column is-6 is-6-tablet ">
             <div class="map">
                 <div class="bus-wrapper">

@@ -9,7 +9,7 @@
                             <p v-text="data.text"></p>
                         </div>
                     </div>  
-                    <div class="image column is-4 is-offset-1-desktop">
+                    <div class="image column is-5">
                         <img :src='data.img' alt="料理長のご挨拶">
                         <p v-text="data.imgtitle"></p>
                     </div>
@@ -71,6 +71,7 @@ export default {
         font-weight:bold;
         font-size:1.2rem;
         text-align:left;
+        white-space:nowrap;
         @include sp(){
             text-align:center;
         }
@@ -85,5 +86,8 @@ export default {
 }
 .center-wrapper{
     justify-content:space-between;
+}
+h2{
+    white-space:nowrap;
 }
 </style>

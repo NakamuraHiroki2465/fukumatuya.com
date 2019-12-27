@@ -9,7 +9,7 @@
                 :class="{'wrapper-80':!sp}" 
                 class="wrapper" 
             >
-                <div class="title  ">
+                <div class="title">
                     <h1  class="has-text-centered">{{message.title}}</h1>
                     <p class="has-text-left">{{message.subexplain}}</p>
                 </div>
@@ -23,12 +23,26 @@
                         <div class="text  has-text-centered-mobile">
                             <h3 >【{{message.subtitle}}】</h3>
                             <p v-text="message.mainMessage"></p>
+                            <div class="for_next">
+                                <div class="detail for_access course ">
+                                    <router-link tag="a" to="dinner"  class="has-text-centered relative">
+                                        <img src="@/assets/images/rightvector.svg" alt="矢印アイコン" class="absolute">
+                                        <p class="has-text-centered">コースをみる</p>
+                                    </router-link>
+                                </div>
+                                <div class="detail for_access course ">
+                                    <a href="#room"  class="room has-text-centered relative">
+                                        <img src="@/assets/images/rightvector.svg" alt="矢印アイコン" class="absolute">
+                                        <p class="has-text-centered">{{message.room}}</p>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div> 
                 </div>
                 <div class="container-detail">
                     <ul class="columns is-mobile">
-                        <router-link to="/dinner" tag="a" class="column is-10 is-offset-1 list" >
+                        <router-link :to='message.url' tag="a" class="column is-10 is-offset-1 list" >
                             <span></span>
                             <span></span>
                             <a  style="color:black;" v-text="message.detail" ></a>
@@ -80,11 +94,14 @@ export default {
     @include sp(){
         padding-top:10px;
     }
+    p{
+        font-size:1.3rem;
+    }
 }
 .text{
     h3{
         font-weight:bold;
-        font-size:1.5rem;
+        font-size:1.7rem;
         padding:30px 0;
         white-space:nowrap;
     }
@@ -162,5 +179,22 @@ export default {
         }
     }
 }
-
+.course{
+    height:50px;
+}
+.detail{
+    width:100%;
+    @include sp(){
+        width:50%;
+    }
+}
+  .absolute{
+      top:50%;
+      left:5px;
+      width:30px!important;
+      transform:translateY(-50%);
+  }
+  .room{
+      cursor:not-allowed;
+  }
 </style>
