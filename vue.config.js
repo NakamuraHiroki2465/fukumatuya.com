@@ -1,4 +1,4 @@
 module.exports = {
   publicPath: 'FukumatuyaVue/',
-  outputDir: '../docs'
+  outputDir: 'docs'
   }
