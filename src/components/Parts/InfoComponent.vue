@@ -107,7 +107,6 @@ export default {
     }
 }
 .container-image{
-    width:100%;
     margin:auto;
     padding:30px 0;
     @include lg(){
