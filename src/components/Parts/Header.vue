@@ -2,7 +2,7 @@
 
     <header>
         <template v-if="sp"> 
-          <div class="header-opener" v-on:click="hasMenu">
+          <div class="header-opener" v-on:click="hasMenu()">
               <span v-bind:class="{open:!isActive,close:isActive}"></span>
               <span v-bind:class="{open:!isActive,close:isActive}"></span>
               <span v-bind:class="{open:!isActive,close:isActive}"></span>
@@ -22,8 +22,8 @@
             </div>
           </template>
           <template >
-            <div v-if="!sp" class="menu column is-5-desktop  is-12-mobile is-paddingless">
-                <ul  class="desktop-menu">
+            <div class="menu column is-5-desktop  is-12-mobile is-paddingless">
+                <ul v-if="!sp" class="desktop-menu">
                     <router-link to="/dinner" tag="li"><img class="main" src="@/assets/images/menu/dinner.png" alt="懐石料理"></router-link>
 
                     <router-link to="/lunch" tag="li"><img class="main" src="@/assets/images/menu/lunch.png" alt="茶屋"></router-link>
@@ -41,7 +41,7 @@
                     </router-link>
 
                 </ul>
-                <ul v-if="sp && isActive" class="sp-menu">
+                <ul v-if="isActive && sp" class="sp-menu">
                   <div class="main-wrapper">
                     <div class="flex-item">
                       <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">福松家の魅力</p></router-link>
