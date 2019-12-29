@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="lunch-wrapper">
         <detail :datas="datas" :header="header"></detail>
         <subdetail :subdatas="subdatas"></subdetail>
         <lunchslideshow></lunchslideshow>
@@ -243,5 +243,9 @@ export default {
 }
 .menu-title{
     font-size:2rem!important;
+}
+.lunch-wrapper{
+    width:100vw;
+    overflow:hidden;
 }
 </style>

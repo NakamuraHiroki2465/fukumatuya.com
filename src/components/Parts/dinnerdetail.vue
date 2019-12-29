@@ -204,9 +204,7 @@ export default {
     border-bottom:1px solid brown;
     margin-bottom:10px;
 }
-h2{
-    white-space:nowrap;
-}
+
 .reservation{
     margin:auto;
     width:100%;

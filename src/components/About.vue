@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="about-wrapper">
         <detail :datas="datas" :header="header"></detail>
         <storeinfo></storeinfo>
     </div>
@@ -29,3 +29,11 @@ export default {
    }
 }
 </script>
+<style scoped lang="scss">
+@import '@/assets/variables.scss';
+.about-wrapper{
+    width:100vw;
+    overflow:hidden;
+}
+
+</style>

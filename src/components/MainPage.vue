@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="main-wrapper">
         <div class="scroll-wrapper">
             <slideShow class="scroll">
             </slideShow>
@@ -182,5 +182,9 @@ export default {
     @include md(){
         width:70%;
     }
+}
+.main-wrapper{
+    width:100vw;
+    overflow:hidden;
 }
 </style>

@@ -109,9 +109,6 @@ export default {
 .container-image{
     margin:auto;
     padding:30px 0;
-    @include lg(){
-        width:80%;
-    }
     .front-image,.after-image{
         position:relative;
         width:100%;

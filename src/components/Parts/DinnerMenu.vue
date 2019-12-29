@@ -9,7 +9,7 @@
                             <p v-text="data.text"></p>
                         </div>
                         <p class="price-title columns">コース料金</p>
-                        <div class="price_info_list flex-wrapper">
+                        <div class="price_info_list ">
                             <div class="price_info" v-for="menu in data.menu" :key="menu.price">
                                 <p class="price">{{menu.price}}</p>
                             </div>
@@ -138,9 +138,12 @@ export default {
 .price-title{
     margin:30px 0;
     font-size:1.5rem!important;
+    text-align:center;
 }
-.flex-wrapper{
-    display:flex;
+.price_info_list{
     border:5px double #cc9900;
+    .price{
+        text-align:center;
+    }
 }
 </style>

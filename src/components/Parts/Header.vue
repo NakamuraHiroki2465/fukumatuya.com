@@ -22,45 +22,49 @@
             </div>
           </template>
           <template >
-            <div class="menu column is-5-desktop  is-12-mobile is-paddingless">
-                <ul v-if="!sp" class="desktop-menu">
-                    <router-link to="/dinner" tag="li"><img class="main" src="@/assets/images/menu/dinner.png" alt="懐石料理"></router-link>
+                <div v-if="!sp" class="menu column is-5-desktop  is-12-mobile is-paddingless">
+                  <ul  class="desktop-menu">
+                      <router-link to="/dinner" tag="li"><img class="main" src="@/assets/images/menu/dinner.png" alt="懐石料理"></router-link>
 
-                    <router-link to="/lunch" tag="li"><img class="main" src="@/assets/images/menu/lunch.png" alt="茶屋"></router-link>
-                    
-                    <router-link to="/about" tag="li"><img class="main" src="@/assets/images/menu/about.png" alt="福松家について"></router-link>
-        
-                    <!-- サブメニュー -->
-                    <router-link to="/contact" class="vertical sub" tag="li">
-                      <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お問い合わせ">
-                      <p>お問い合わせ</p>
-                    </router-link>
-                    <router-link to="/access" class="vertical sub" tag="li">
-                      <img class="icon" src="@/assets/images/bottomvector.svg" alt="アクセス">
-                      <p>アクセス</p>
-                    </router-link>
-
-                </ul>
-                <ul v-if="isActive && sp" class="sp-menu">
-                  <div class="main-wrapper">
-                    <div class="flex-item">
-                      <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">福松家の魅力</p></router-link>
+                      <router-link to="/lunch" tag="li"><img class="main" src="@/assets/images/menu/lunch.png" alt="茶屋"></router-link>
                       
-                      <router-link to="/lunch" tag="li" class="main_menu"><p @click="hasMenu">茶屋紹介</p></router-link>
+                      <router-link to="/about" tag="li"><img class="main" src="@/assets/images/menu/about.png" alt="福松家について"></router-link>
+          
+                      <!-- サブメニュー -->
+                      <router-link to="/contact" class="vertical sub" tag="li">
+                        <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お問い合わせ">
+                        <p>お問い合わせ</p>
+                      </router-link>
+                      <router-link to="/access" class="vertical sub" tag="li">
+                        <img class="icon" src="@/assets/images/bottomvector.svg" alt="アクセス">
+                        <p>アクセス</p>
+                      </router-link>
 
-                      <router-link to="/dinner" tag="li" class="main_menu"><p @click="hasMenu">会席料理紹介</p></router-link>
+                  </ul>
+                </div>
+                <div v-if="isActive && sp" class="menu column is-5-desktop is-12-mobile is-paddingless">
+                  <ul  class="sp-menu">
+                    <div class="main-wrapper">
+                      <div class="flex-item">
+                        <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">トップページ</p></router-link>
+
+                        <router-link to="/about" tag="li" class="main_menu"><p @click="hasMenu">福松家の魅力</p></router-link>
+                        
+                        <router-link to="/lunch" tag="li" class="main_menu"><p @click="hasMenu">茶屋紹介</p></router-link>
+
+                        <router-link to="/dinner" tag="li" class="main_menu"><p @click="hasMenu">会席料理紹介</p></router-link>
+                      </div>
                     </div>
-                  </div>
-                  <div class="sub-wrapper">
-                    <router-link  to="/contact" tag="li"><p @click="hasMenu">お問い合わせ</p></router-link>
-                    
-                    <router-link to="/access" tag="li"><p @click="hasMenu">アクセス</p></router-link>
-                  </div>
-                  <div class="instagram">
-                    <a href="https://www.instagram.com/fukumatuya_29028/">Follow Instagram</a>
-                  </div>
-                </ul>
-            </div>
+                    <div class="sub-wrapper">
+                      <router-link  to="/contact" tag="li"><p @click="hasMenu">お問い合わせ</p></router-link>
+                      
+                      <router-link to="/access" tag="li"><p @click="hasMenu">アクセス</p></router-link>
+                    </div>
+                    <div class="instagram">
+                      <a href="https://www.instagram.com/fukumatuya_29028/">Follow Instagram</a>
+                    </div>
+                  </ul>
+                </div>
           </template> 
         </div>
     </header>
@@ -172,7 +176,7 @@ header{
         margin:3px auto;
         margin-left:0;
         height:5rem;
-        width:260px;
+        width:280px;
         h4{
           white-space:nowrap;
           font-size:1.2rem;
@@ -324,6 +328,6 @@ header{
   right:0;
   bottom:0;
   margin:auto;
-  height:180px;
+  height:230px;
 }
 </style>
