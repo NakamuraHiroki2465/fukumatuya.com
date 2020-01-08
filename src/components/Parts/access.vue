@@ -155,7 +155,7 @@ h4{
     .map-wrapper{
         position:relative;
         z-index:499;
-        min-width:400px;
+        width:400px!important;
         margin-right:10px;
     }
     .googlemap{
