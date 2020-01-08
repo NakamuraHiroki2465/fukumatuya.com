@@ -75,6 +75,7 @@ h4{
     .map-wrapper{
     white-space:nowrap;
     padding-bottom:10px;
+    margin-bottom:10px;
     @include sp(){
         width:90%;
         margin:auto;
@@ -147,5 +148,19 @@ h4{
 }
 .bus{
     left:calc(50% + 50px);
+}
+.flex-wrap{
+    position:relative;
+    margin-bottom:10px;
+    .map-wrapper{
+        position:relative;
+        z-index:499;
+        min-width:400px;
+        margin-right:10px;
+    }
+    .googlemap{
+        position:relative;
+        z-index:500;
+    }
 }
 </style>

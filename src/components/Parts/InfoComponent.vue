@@ -45,7 +45,9 @@
                         <router-link :to='message.url' tag="a" class="column is-10 is-offset-1 list" >
                             <span></span>
                             <span></span>
-                            <a  style="color:black;" v-text="message.detail" ></a>
+                            <div v-for="detail in message.detail" :key="detail">
+                                <a  style="color:black;" v-text="detail"></a>
+                            </div>
                         </router-link> 
                     </ul>
                 </div>

@@ -41,8 +41,11 @@ export default {
                     mainMessage:"都会を離れ大自然の中、清流の響き鳥のさえずりを聞きながら日本料理に舌鼓。お客様が心身共にリフレッシュしていただくことをモットーに、ゆったりとした一時を過ごしていただけます。手作りにこだわり個室のお座敷にて創作料理を堪能していただきます。",
                     frontimage:require('@/assets/images/enkai-basic.jpg'),
                     frontalt:"宴会場スタンダードコース",
-                    detail:`ご予約はこちらまで 090-1209-9777`,
-                    url:'/dinner',
+                    detail:[
+                        'ご予約はこちらまで',
+                        '090-1209-9777'
+                    ],
+                    url:'',
                     room:'お部屋をみる'
                 },
                 {
@@ -51,8 +54,7 @@ export default {
                     mainMessage:"創業は120年前。当時から伝統を守りながら、太平山の麓で懐かしみのある味を提供しております。太平山へ観光や登山で訪れた人々の疲れを癒し、時間を忘れてゆったりとできます。",
                     frontimage:require('@/assets/images/greeting-wrapper.jpg'),
                     frontalt:"店舗外観",
-                    detail:"メニュー詳細・料金一覧",
-                    detail2:"太平山観光について",
+                    detail:["メニュー詳細・料金一覧"],
                     url:'/lunch',
                     room:'店内の様子'
                 }
