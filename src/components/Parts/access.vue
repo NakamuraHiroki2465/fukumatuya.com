@@ -121,7 +121,6 @@ h4{
 
 }
 .googlemap{
-    width:100%;
     iframe{
         width:100%;
         height:300px;
@@ -155,12 +154,13 @@ h4{
     .map-wrapper{
         position:relative;
         z-index:499;
-        width:400px!important;
+        min-width:400px;
         margin-right:10px;
     }
     .googlemap{
         position:relative;
         z-index:500;
+        min-width:400px;
     }
 }
 </style>
