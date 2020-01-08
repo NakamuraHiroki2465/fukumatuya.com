@@ -155,7 +155,12 @@ h4{
         position:relative;
         z-index:499;
         min-width:400px;
-        margin-right:10px;
+        @include lg(){
+            margin-right:10px;
+        }
+        @include md(){
+            margin-right:10px;
+        }  
     }
     .googlemap{
         position:relative;
