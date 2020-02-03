@@ -1,13 +1,16 @@
 <template>
     <div class="about-wrapper">
-        <div class="wrapper-60">
-            <div class="main-title">
-                <img :src='header.img' alt="メイン背景">
-                <h1 class="main-title" v-text="header.title"></h1>
+        <div class="main-title">
+            <img :src='header.img' alt="メイン背景">
+            <h1 class="main-title" v-text="header.title"></h1>
+            <div class="site-map">
+                <p><router-link tag="a" to="/" style="color:white;">トップ</router-link> > <router-link tag="a" to="/dinner" style="color:white;f">会席料理</router-link></p>
             </div>
+        </div>
+        <div class="wrapper-60">
             <div class="vfor" v-for="data in this.datas" :key="data.title">
                 <h2  class="title" v-text="data.title"></h2>
-                <div class="center-wrapper columns ">
+                <div class="center-wrapper columns">
                     <div class="about-container column is-7">
                         <div class="about-text ">
                             <p v-text="data.text"></p>
@@ -37,18 +40,20 @@
                             </div>
                         </div>
                     </div>  
-                    <div class="image column is-5">
+                    <div  class="image column is-5">
                         <div class="column-wrapper">
-                            <div class="detail  " v-for="store in stores" :key="store.title">
-                                <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" v-text="store.title"></p>
-                                <p style="white-space:pre-wrap; word-wrap:break-word;" class="" v-text="store.contents"></p>
-                            </div>
-                            <div class="detail for_access access">
-                                <router-link to="/access" tag="a" class="has-text-centered relative ">
-                                    <img src="@/assets/images/rightvector.svg" alt="矢印アイコン" class="absolute">
-                                    <p class="has-text-centered">交通アクセス</p>
-                                </router-link>
-                            </div>
+                            <template v-if="!sp">
+                                <div  class="detail  " v-for="store in stores" :key="store.title">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" v-text="store.title"></p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="" v-text="store.contents"></p>
+                                </div>
+                                <div class="detail for_access access">
+                                    <router-link to="/access" tag="a" class="has-text-centered relative ">
+                                        <img src="@/assets/images/rightvector.svg" alt="矢印アイコン" class="absolute">
+                                        <p class="has-text-centered">交通アクセス</p>
+                                    </router-link>
+                                </div>
+                            </template>
                             <div class="reservation">
                                 <p class="phone_index">お問い合わせはこちらまで</p>
                                 <p class="phone">TEL:0282-22-1827</p>
@@ -72,8 +77,7 @@ export default {
             stores:[
                 {
                     title:'住所',
-                    contents:`〒328-0054
-                                栃木県栃木市平井町681`
+                    contents:`栃木県栃木市平井町681`
                 },
                 {
                     title:'電話',
@@ -107,13 +111,44 @@ export default {
 .vfor{
     margin:100px auto;
 }
+
 .main-title{
-    height:200px;
-    margin-top:100px;
+    height:300px;
     margin-bottom:100px;
     position:relative;
-    img{
+    overflow:hidden;
+    @include sp(){
+        font-size:2rem!important;
+    }
+    .site-map{
         width:100%;
+        height:30px;
+        background-color:black;
+        position:absolute;
+        top:100%;
+        transform:translateY(-100%);
+        p{
+            color:rgba(255,255,255,0.7);
+            height:30px;
+            line-height:30px;
+            a{
+                font-size:1rem!important;
+            }
+            @include sp(){
+                padding-left:20px;
+            }
+            @include md(){
+                padding-left:10vw;
+            }
+            @include lg(){
+                padding-left:20vw;
+            }
+        }
+    }
+    img{
+        min-width:990px;
+        width:100%;
+        min-height:300px;
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);
@@ -123,9 +158,12 @@ export default {
         font-size:2.5rem;
         font-weight:bold;
         text-align:center;
-        height:200px;
-        line-height:200px;
+        height:300px;
+        line-height:300px;
         color:white;
+        position:absolute;
+        margin:0;
+        width:100%;
     }
 }
 .wrapper-60{

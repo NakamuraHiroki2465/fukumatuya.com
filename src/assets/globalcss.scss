@@ -50,6 +50,9 @@ a{
     color:white;
     text-decoration:none;
 }
+p,li,a,h1,h2,h3,h4,th{
+  letter-spacing:-0.05rem;
+}
 @include sp (){
   p,li,a{
     font-size:1rem!important;
@@ -70,6 +73,26 @@ a{
     font-size:1.2rem!important;
   }
 }
+p,li,a{
+  font-size:1.2rem;
+}
+h1{
+  font-size:1.8rem;
+}
+h2{
+  font-size:1.6rem;
+}
+h3{
+  font-size:1.5rem;
+}
+h4{
+  font-size:1.5rem;
+}
+th{
+  font-size:1.5rem;
+}
+
+
 .wrapper60{
   width:60%;
   margin:50px auto!important;

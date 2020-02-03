@@ -1,23 +1,33 @@
 <template>
     <div class="about-wrapper" id="menu">
-        <div class="wrapper-60">
-            <div class="vfor" v-for="data in this.datas" :key="data.title">
-                <h2  class="title" v-text="data.title"></h2>
-                <div class="center-wrapper columns">
-                    <div class="about-container column is-6">
-                        <div class="about-text ">
-                            <p v-text="data.text"></p>
-                        </div>
-                        <p class="price-title columns">コース料金</p>
-                        <div class="price_info_list ">
-                            <div class="price_info" v-for="menu in data.menu" :key="menu.price">
+        <div class="vfor" v-for="(data,index) in this.datas" :key="data.title" :style="data.menu_style">
+            <div class="wrapper-60">
+                <div class="vfor_container">
+                    <h2  class="title" v-text="data.title"></h2>
+                    <div class="center-wrapper columns">
+                        <div class="about-container column is-6">
+                            <div class="about-text ">
+                                <p class="menu-explain" v-text="data.text"></p>
+                            </div>
+                            <p class="price-title columns">コース料金</p>
+                            <div class="price_info_list" v-for="menu in data.menu" :key="menu.price">
                                 <p class="price">{{menu.price}}</p>
                             </div>
-                        </div>
-                    </div>  
-                    <div class="image-container column is-6">
-                        <div class="image-wrapper">
-                            <img :src="data.img" :alt="data.alt">
+                        </div>  
+                        <div class="image-container column is-6">
+                            <div class="image-wrapper">
+                                <div class="cp_cssslider">
+                                    <input type="radio" :name="data.title" :id="data.alt + index" checked/>
+                                    <label :for="data.alt + index"><img :src="data.img" /></label>
+                                    <img :src="data.img" />
+                                    <input type="radio" :name="data.title" :id="data.alt + 2"/>
+                                    <label :for="data.alt + 2"><img :src="data.img" /></label>
+                                    <img :src="data.img" />
+                                    <input type="radio" :name="data.title" :id="data.alt + 3"/>
+                                    <label :for="data.alt + 3"><img :src="data.img" /></label>
+                                    <img :src="data.img" />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -34,8 +44,16 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
+.wrapper-60{
+    margin:0 auto!important;
+}
 .vfor{
-    margin:100px auto;
+    width:100%;
+    padding:50px 0;
+}
+.vfor_container{
+    margin:0 auto;
+    
 }
 .main-title{
     height:200px;
@@ -107,16 +125,12 @@ export default {
 .title{
     width:100%;
     font-weight:bold;
-    font-size:2rem;
+    font-size:2.5rem;
     border-bottom:1px solid rgba(0,0,0,0.3);
     box-shadow:0 5px 10px -10px black;
 }
 .center-wrapper{
     justify-content:space-between;
-}
-.price{
-    font-size:1.5rem;
-    font-weight:bold;
 }
 .price_info{
     margin:15px 0;
@@ -126,13 +140,16 @@ export default {
     }
 }
 .image-wrapper{
-    width:90%;
     overflow:hidden;
     margin:auto;
-    text-align:center;
-    img{
-        width:inherit;
-        height:inherit;
+    width:400px;
+    .sub{
+        width:120px;
+        margin-right:10px;
+    }
+    .main{
+        width:400px;
+        
     }
 }
 .price-title{
@@ -141,9 +158,62 @@ export default {
     text-align:center;
 }
 .price_info_list{
-    border:5px double #cc9900;
     .price{
-        text-align:center;
+        border-bottom:1px solid #b8860b;
+        font-size:1.4rem!important;
     }
+}
+.menu-explain{
+    color:rgba(0,0,0,0.6);
+}
+*, *:before, *:after {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+.cp_cssslider {
+width: 300px;
+padding-top: 150px; /* 画像の高さ */
+position: relative;
+margin: 2em auto;
+text-align: center;
+}
+.cp_cssslider > img {
+position: absolute;
+left: 0;
+top: 0;
+transition: all 0.5s;
+border-radius: 3px;
+/* box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3); */
+}
+.cp_cssslider input{
+display: none;
+}
+/* サムネイル */
+.cp_cssslider label {
+margin: 15px 5px 0 5px;
+border: 2px solid #ffffff;
+display: inline-block;
+cursor: pointer;
+transition: all 0.5s ease;
+opacity: 0.6;
+border-radius: 3px;
+}
+.cp_cssslider label:hover {
+opacity: 0.9;
+}
+.cp_cssslider label img {
+display: block;
+width:86px;
+border-radius: 2px;
+}
+.cp_cssslider input:checked + label {
+border: 2px solid #FF7043;
+opacity: 1;
+}
+.cp_cssslider input~ img {
+opacity: 0;
+}
+.cp_cssslider input:checked + label + img {
+opacity: 1;
 }
 </style>

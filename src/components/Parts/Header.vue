@@ -33,11 +33,11 @@
                       <!-- サブメニュー -->
                       <router-link to="/contact" class="vertical sub" tag="li">
                         <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お問い合わせ">
-                        <p>お問い合わせ</p>
+                        <p class="is-small">お問い合わせ</p>
                       </router-link>
                       <router-link to="/access" class="vertical sub" tag="li">
                         <img class="icon" src="@/assets/images/bottomvector.svg" alt="アクセス">
-                        <p>アクセス</p>
+                        <p class="is-small">アクセス</p>
                       </router-link>
 
                   </ul>
@@ -113,7 +113,7 @@ export default {
 header{
   position:relative;
   width:100%;
-  height:150px;
+  height:200px;
   margin:0 auto;
   background-color:#f6efdf;
   z-index:501;
@@ -127,10 +127,12 @@ header{
   }
   .header-wrapper{
     width:100%;
+    height:100%;
     display:flex;
     .header-main{
       margin:auto;
       padding:0 0 0 50px!important;
+      height:100%;
       @include sp(){
         margin:0;
         padding:20px 30px!important;
@@ -213,6 +215,7 @@ header{
       }
     }
     .menu{
+      height:100%;
       @include sp(){
         width:calc(100% - 60px);
         margin:0 auto;
@@ -234,10 +237,11 @@ header{
         }
       }
       .main{
-        height:138px;
+        height:160px;
         min-width:80px;
         transition:border 0.5s;
         border:2px solid rgba(255,255,255,0.5);
+        vertical-align:middle;
         &:hover{
           border:2px solid rgba(255,255,255,1);
           transition:border 0.5s;
@@ -329,5 +333,8 @@ header{
   bottom:0;
   margin:auto;
   height:230px;
+}
+.is-small{
+  font-size:1rem;
 }
 </style>

@@ -29,11 +29,11 @@ export default {
                     subexamples:[
                         {
                             title:'生物が食べられないお客様 ',
-                            text:'→代わりに焼き魚や煮物、火を通した料理を提供いたしました。'
+                            text:'例：代わりに焼き魚や煮物、火を通した料理を提供いたしました。'
                         },
                         {
                             title:'病気で食事が制限されている',
-                            text:'→塩分を抜いた料理を提供いたしました。玉子焼きでは出汁を抜き、焼き鳥はタレをつけず焼くなどを致しました。'
+                            text:'例：塩分を抜いた料理を提供いたしました。玉子焼きでは出汁を抜き、焼き鳥はタレをつけず焼くなどを致しました。'
                         }
                     ],
                     imgtitle:'太平山名物・だんご'
@@ -45,6 +45,7 @@ export default {
                     text:'季節の食材を使った会席料理。コース値段によって中身の食材がかわります。',
                     img:require('@/assets/images/enkai-basic.jpg'),
                     alt:"季節コース",
+                    menu_style:"background-color:rgba(245,222,179,0.5);",
                     menu:[
                         {
                             price:'3000円',
@@ -69,6 +70,7 @@ export default {
                     text:'とにかく旨いものが食べたいというグルメ好きにおすすめです。食材にこだわりをもって旬の会席料理をお出し致します。',
                     img:require('@/assets/images/enkai-basic2.jpg'),
                     alt:"お任せコース",
+                    menu_style:"background-color:rgba(222,187,135,0.5);",
                     menu:[
                         {
                             price:'5000〜8000円',
@@ -81,6 +83,7 @@ export default {
                     text:'ふぐコースは期間限定で下関のとらふぐをうすづくり、からあげ、鍋などふぐづくしのフルコースです。',
                     img:require('@/assets/images/fugu.jpg'),
                     alt:"ふぐコース",
+                    menu_style:"background-color:rgba(255,255,255,0.5);",
                     menu:[
                         {
                             price:'7000〜8000円',
