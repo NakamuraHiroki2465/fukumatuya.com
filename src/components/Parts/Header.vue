@@ -8,21 +8,21 @@
               <span v-bind:class="{open:!isActive,close:isActive}"></span>
           </div>
         </template>
-        <div class="header-wrapper columns is-mobile is-marginless">
+        <div class="header-wrapper">
           <template v-if="!isActive || !sp">
-            <div class="header-main column is-3-desktop  is-offset-1-desktop">
+            <div class="header-main ">
                 <div class="title">
                   <router-link to="/" tag="h1">福松家</router-link>
                   <p class="sub">-栃木市、太平山の割烹-</p>
                 </div>
                 <div class="reservation ">
-                  <h4>ご予約はこちらまで</h4>
-                  <p class="phonenumber">電話番号:0282-22-1827</p>
+                  <h4><span class="circle"></span>ご予約はこちらまで</h4>
+                  <p class="phonenumber">電話番号&nbsp;:&nbsp;<span>0282-22-1827</span></p>
                 </div>
             </div>
           </template>
           <template >
-                <div v-if="!sp" class="menu column is-5-desktop  is-12-mobile is-paddingless">
+                <div v-if="!sp" class="menu is-paddingless">
                   <ul  class="desktop-menu">
                       <router-link to="/dinner" tag="li"><img class="main" src="@/assets/images/menu/dinner.png" alt="懐石料理"></router-link>
 
@@ -122,15 +122,15 @@ header{
   border-bottom:6px solid brown;
   border-top:6px solid brown;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
-  @include md(){
-    min-width:800px;
-  }
   .header-wrapper{
-    width:100%;
+    width:950px;
     height:100%;
     display:flex;
+    justify-content:space-between;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
     .header-main{
-      margin:auto;
       padding:0 0 0 50px!important;
       height:100%;
       @include sp(){
@@ -174,26 +174,44 @@ header{
       }
       .reservation{
         border:5px double brown;
-        padding:0 10px;
-        margin:3px auto;
+        padding:0;
+        margin:25px auto;
         margin-left:0;
-        height:5rem;
-        width:280px;
+        height:6rem;
+        min-width:450px;
+        width:450px;
         h4{
           white-space:nowrap;
-          font-size:1.2rem;
+          font-size:1.5rem;
           line-height:2rem!important;
           height:2rem!important;
           margin:0;
+          padding-left:10%;
+          position:relative;
+          .circle{
+            width:10px;
+            height:10px;
+            border-radius:50%;
+            background-color:black;
+            position:absolute;
+            top:50%;
+            left:20px;
+          }
         }
         p{
-          font-size:1.5rem;
+          font-size:1.8rem;
           white-space:nowrap;
           line-height:3rem!important;
           height:3rem!important;
           margin:0;
+          padding-left:10%;
+          background:linear-gradient(to right,rgba(192,192,192,0.3),rgba(255,255,255,0.6) 10%,rgba(255,255,255,0.6) 90%,rgba(192,192,192,0.3) );
           @include sp(){
             font-size:1.5rem!important;
+          }
+          span{
+            color:brown;
+            letter-spacing:0.1rem;
           }
         }
       }

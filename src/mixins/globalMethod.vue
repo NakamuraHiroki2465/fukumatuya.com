@@ -4,7 +4,8 @@ export default {
         return{
             sp:true,
             loading:true,
-            width:window.innnerWidth
+            width:window.innnerWidth,
+            headersp:false,
         }
     },
     mounted(){
@@ -12,6 +13,8 @@ export default {
         this.loading=false
         if (this.width < 769 || navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
           this.sp = true
+        }else if(this.width < 890){
+          this.headersp = true
         }else{
           this.sp = false
         }
