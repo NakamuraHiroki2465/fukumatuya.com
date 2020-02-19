@@ -10,15 +10,23 @@
         </template>
         <div class="header-wrapper">
           <template v-if="!isActive || !sp">
-            <div class="header-main ">
+            <div class="header-main">
                 <div class="title">
-                  <router-link to="/" tag="h1">福松家</router-link>
+                  <router-link to="/" tag="h1" class="title__content">福松家</router-link>
                   <p class="sub">-栃木市、太平山の割烹-</p>
                 </div>
                 <div class="reservation ">
-                  <h4><span class="circle"></span>ご予約はこちらまで</h4>
-                  <p class="phonenumber">電話番号&nbsp;:&nbsp;<span>0282-22-1827</span></p>
+                  <h4 class="reserve__content"><span class="circle"></span>ご予約はこちらまで</h4>
+                  <p class="phonenumber">
+                    電話番号&nbsp;:&nbsp;
+                    <span><br v-if="sp">0282-22-1827</span>
+                   <!--  <img src="@/assets/images/sakura.png" alt="桜"> -->
+                  </p>
+                  <p class="time" v-if="!sp">
+                    営業時間&nbsp;:&nbsp;平日 9:00&nbsp;～&nbsp;18:00
+                  </p>
                 </div>
+  
             </div>
           </template>
           <template >
@@ -123,26 +131,27 @@ header{
   border-top:6px solid brown;
   background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
   .header-wrapper{
-    width:950px;
+    width:1024px;
     height:100%;
     display:flex;
     justify-content:space-between;
     position:absolute;
     left:50%;
     transform:translateX(-50%);
+    @include sp(){
+      width:100%;
+    }
     .header-main{
       padding:0 0 0 50px!important;
       height:100%;
+      width:inherit;
       @include sp(){
         margin:0;
-        padding:20px 30px!important;
-        h1,h4,p{
+        padding:20px 0!important;
+        .sub,.reserve_content,.time,.title__content{
           line-height:1.2rem!important;
           height:1.2rem!important;
         }
-      }
-      .title,.reservation{
-        width:auto;
       }
       .title{
         display:flex;
@@ -168,18 +177,29 @@ header{
           line-height:3rem;
           white-space:nowrap;
           font-weight:bold;
-          padding-left:10px;
+          margin-left:10%;
           cursor:pointer;
         }
       }
       .reservation{
         border:5px double brown;
         padding:0;
-        margin:25px auto;
+        margin:10px auto;
         margin-left:0;
-        height:6rem;
-        min-width:450px;
+        height:8rem;
         width:450px;
+        overflow:hidden;
+        @include lg(){
+          min-width:450px;
+        }
+        @include md(){
+          min-width:450px;
+        }
+        @include sp(){
+          width:90%;
+          margin:10px auto;
+          height:7rem;
+        }
         h4{
           white-space:nowrap;
           font-size:1.5rem;
@@ -188,6 +208,7 @@ header{
           margin:0;
           padding-left:10%;
           position:relative;
+          z-index:2;
           .circle{
             width:10px;
             height:10px;
@@ -198,21 +219,41 @@ header{
             left:20px;
           }
         }
-        p{
-          font-size:1.8rem;
+        .phonenumber{
+          position:relative;
+          font-size:2rem;
           white-space:nowrap;
-          line-height:3rem!important;
-          height:3rem!important;
+          line-height:3rem;
+          height:3rem;
           margin:0;
           padding-left:10%;
           background:linear-gradient(to right,rgba(192,192,192,0.3),rgba(255,255,255,0.6) 10%,rgba(255,255,255,0.6) 90%,rgba(192,192,192,0.3) );
           @include sp(){
             font-size:1.5rem!important;
+            height:4rem;
+            line-height:2rem;
           }
           span{
             color:brown;
             letter-spacing:0.1rem;
+            z-index:3;
+            position:relative;
           }
+/*           img{
+              position:absolute;
+              top:0;
+              left:50%;
+              transform:translate(0,-40%);
+              width:50%;
+              z-index:0;
+          } */
+        }
+        .time{
+          height:2rem;
+          padding-left:10%;
+          white-space:nowrap;
+          position:relative;
+          z-index:2;
         }
       }
       .sub-menu{
@@ -252,11 +293,12 @@ header{
           list-style:none;
           position:relative;
           margin:0;
+          display:inline;
+          height:100%;
         }
       }
       .main{
-        height:160px;
-        min-width:80px;
+        min-width:110px;
         transition:border 0.5s;
         border:2px solid rgba(255,255,255,0.5);
         vertical-align:middle;
@@ -268,7 +310,7 @@ header{
       }
       .sp-menu{
         width:100vw;
-        height:50vh;
+        height:100vh;
         left:0;
         right:0;
         top:0;
