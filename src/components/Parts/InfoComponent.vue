@@ -6,7 +6,7 @@
             :key="message.title"
         >
             <div 
-                :class="{'wrapper-80':!sp}" 
+                
                 class="wrapper" 
             >
                 <div class="title">
@@ -14,14 +14,14 @@
                     <p class="has-text-left">{{message.subexplain}}</p>
                 </div>
                 <div class="flex-wrapper columns">
-                    <div class="container-image column is-7">
+                    <div class="container-image">
                         <div class="front-image">
                             <img  :src="message.frontimage" :alt="message.frontalt">
                         </div>
                     </div>
-                    <div class="container  column is-5">
+                    <div class="container-text">
                         <div class="text  has-text-centered-mobile">
-                            <h3 >【{{message.subtitle}}】</h3>
+                            <h3 class="subtitle" >【{{message.subtitle}}】</h3>
                             <p v-text="message.mainMessage"></p>
                             <div class="for_next">
                                 <div class="detail for_access course ">
@@ -66,9 +66,17 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
+.flex-wrapper{
+    display:flex;
+    justify-content:space-between;
+}
 .wrapper{
-    margin:100px 0 0 0;
     padding:50px 0;
+    width:80%;
+    margin:100px auto 0 auto;
+    @include lg(){
+        min-width:1024px;
+    }
 }
 
 .title h1{
@@ -90,11 +98,30 @@ export default {
         }
     }
 }
+.container-text{
+    @include sp(){
+        width:100%;
+    }
+    @include md(){
+        width:100%;
+    }
+}
 .text{
     white-space:pre-wrap;
     font-weight:bold;
+    .subtitle{
+        text-align:center;
+    }
+    @include lg(){
+        width:600px;
+    }
     @include sp(){
         padding-top:10px;
+        margin:auto;
+    }
+    @include md(){
+        margin:auto;
+        width:600px;
     }
     p{
         font-size:1.3rem;
@@ -108,21 +135,36 @@ export default {
         white-space:nowrap;
     }
 }
+
 .container-image{
     margin:auto;
     padding:30px 0;
+    width:300px;
+    @include md(){
+        display:none;
+    }
+    @include sp(){
+        display:none;
+    }
     .front-image,.after-image{
         position:relative;
         width:100%;
         text-align:center;
         img{
             max-width:600px;
-            width:80%;
+            width:300px;
         }
         @include sp(){
             margin:auto;
             img{
                 margin:auto;
+                width:200px;
+            }
+        }
+        @include md(){
+            img{
+                margin:auto;
+                width:200px;
             }
         }
     }
