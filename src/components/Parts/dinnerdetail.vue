@@ -2,16 +2,16 @@
     <div class="about-wrapper">
         <div class="main-title">
             <img :src='header.img' alt="メイン背景">
-            <h1 class="main-title" v-text="header.title"></h1>
+            <h1 class="main-title">会席料理について</h1>
             <div class="site-map">
                 <p><router-link tag="a" to="/" style="color:white;">トップ</router-link> > <router-link tag="a" to="/dinner" style="color:white;f">会席料理</router-link></p>
             </div>
         </div>
         <div class="wrapper-60">
             <div class="vfor" v-for="data in this.datas" :key="data.title">
-                <h2  class="title" v-text="data.title"></h2>
-                <div class="center-wrapper columns">
-                    <div class="about-container column is-7">
+                <h2  class="title"><span style="font-size:2rem!important;">見・香・味</span>&nbsp;全てを堪能する</h2>
+                <div class="center-wrapper flex-wrapper">
+                    <div class="about-container">
                         <div class="about-text ">
                             <p v-text="data.text"></p>
                         </div>
@@ -40,12 +40,32 @@
                             </div>
                         </div>
                     </div>  
-                    <div  class="image column is-5">
+                    <div  class="image">
                         <div class="column-wrapper">
                             <template v-if="!sp">
-                                <div  class="detail  " v-for="store in stores" :key="store.title">
-                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" v-text="store.title"></p>
-                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="" v-text="store.contents"></p>
+                                <div  class="detail">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" >住所</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;栃木県栃木市平井町681</p>
+                                </div>
+                                <div  class="detail">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" >電話</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;0282-22-1827</p>
+                                </div>
+                                <div  class="detail">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">営業時間</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="" >&nbsp;茶屋: 10:00 〜 18:00<br>&nbsp;宴会: 11:00 〜 22:00(要予約)</p>
+                                </div>
+                                <div  class="detail">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">定休日</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;不定休</p>
+                                </div>
+                                <div  class="detail">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">駐車場</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;あじさい坂駐車場:約50台<br>&nbsp;店鋪正面:15台ほど</p>
+                                </div>
+                                <div  class="detail">
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">決済方法</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;現金のみにて承ります</p>
                                 </div>
                                 <div class="detail for_access access">
                                     <router-link to="/access" tag="a" class="has-text-centered relative ">
@@ -53,12 +73,12 @@
                                         <p class="has-text-centered">交通アクセス</p>
                                     </router-link>
                                 </div>
+                                <div class="reservation">
+                                    <p class="phone_index">お問い合わせはこちらまで</p>
+                                    <p class="phone">TEL:0282-22-1827</p>
+                                    <p class="store_time">営業時間 : 10:00〜18:00</p>
+                                </div>
                             </template>
-                            <div class="reservation">
-                                <p class="phone_index">お問い合わせはこちらまで</p>
-                                <p class="phone">TEL:0282-22-1827</p>
-                                <p class="store_time">営業時間 : 10:00〜18:00</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -74,34 +94,6 @@ export default {
     ],
     data:function(){
         return{
-            stores:[
-                {
-                    title:'住所',
-                    contents:`栃木県栃木市平井町681`
-                },
-                {
-                    title:'電話',
-                    contents:'0282-22-1827'
-                },
-                {
-                    title:'営業時間',
-                    contents:`茶屋: 10:00 〜 18:00
-                                宴会: 11:00 〜 22:00(要予約)`
-                },
-                {
-                    title:'定休日',
-                    contents:'不定休'
-                },
-                {
-                    title:'駐車場',
-                    contents:`あじさい坂駐車場:約50台
-                                店鋪正面:15台ほど`
-                },
-                {
-                    title:'決済方法',
-                    contents:'現金のみにて承ります'
-                },
-            ]
         }
     }
 }
@@ -167,21 +159,29 @@ export default {
     }
 }
 .wrapper-60{
-    width:60%;
     margin:50px auto;
+    width:60%;
+    @include lg(){
+         min-width:850px;
+    }
     @include md(){
         width:80%;
+         min-width:850px;
     }
     @include sp(){
         width:90%;
     }
 }
 .about-container{
+    width:500px;
     @include md(){
         min-width:400px;
     }
     @include lg(){
         min-width:400px;
+    }
+    @include sp(){
+        width:100%;
     }
 }
 .about-text{
@@ -191,8 +191,10 @@ export default {
     }
 }
 .image{
+    width:300px;
     @include sp(){
         margin-top:40px;
+        display:none;
     }
     p{
         font-weight:bold;
@@ -274,5 +276,8 @@ export default {
 }
 .access{
     margin-left:0!important;
+}
+.flex-wrapper{
+    display:flex;
 }
 </style>
