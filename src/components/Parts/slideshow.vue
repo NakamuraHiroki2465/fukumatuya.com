@@ -1,13 +1,14 @@
 <template>
     <vueper-slides 
-        fade 
+        fade
         slide-content-outside="top" 
         slide-content-outside-class="max-widthed" 
         :touchable="false" 
         :breakpoints="breakpoints" 
         :arrows="false" 
         :fixed-height="true"
-        transition-speed="250"
+        autoplay
+        transition-speed="1000"
     >
         <vueper-slide
          v-for="(url,i) in urls" 
@@ -37,27 +38,27 @@ export default {
                 {
                     src:require('@/assets/images/fukumatu_food.jpg'),
                     alt:'福松家の料理',
-                    title:'<p style=" font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">全てが手作りを<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;心行くまで<p>'
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">全てが手作りを<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;心行くまで<p>'
                 },
                 {
                     src:require('@/assets/images/yakitori1.png'),
                     alt:'太平山名物焼き鳥',
-                    title:'<p style=" font-size:2rem!important;color:white;position:absolute;top:50%;left:2.5%;transform:translate(50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">秘伝のタレを使用<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;絶品の焼き鳥に舌鼓<p>'
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;left:2.5%;transform:translate(50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">秘伝のタレを使用<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;絶品の焼き鳥に舌鼓<p>'
                 },
                 {
                     src:require('@/assets/images/dango.png'),
                     alt:'太平山名物だんご',
-                    title:'<p style=" font-size:2rem!important;color:white;position:absolute;top:50%;right:50%;transform:translate(50%,-50%);height:300px;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">草だんご派？<br>&nbsp;&nbsp;白団子派？<p>'
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:50%;transform:translate(50%,-50%);height:300px;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">草だんご派？<br>&nbsp;&nbsp;白団子派？<p>'
                 },
                 {
                     src:require('@/assets/images/enkai-jyou.jpg'),
                     alt:'団体のお客様用宴会場スペース',
-                    title:'<p style=" font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:5%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">日常から離れ<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;落ち着いた一時を<p>'
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:5%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">日常から離れ<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;落ち着いた一時を<p>'
                 },
                 {
                     src:require('@/assets/images/greeting-wrapper.jpg'),
                     alt:'太平山の名物と共に自慢の割烹を',
-                    title:'<p style=" font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:5%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">百年以上続く<br>&nbsp;&nbsp;&nbsp;&nbsp;愛され続けた空間<p>'
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:5%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">百年以上続く<br>&nbsp;&nbsp;&nbsp;&nbsp;愛され続けた空間<p>'
                 },
             ],
             breakpoints: {
