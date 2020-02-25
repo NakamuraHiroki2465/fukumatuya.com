@@ -50,7 +50,7 @@
 
                   </ul>
                 </div>
-                <div :class="{none:!isActive && sp}" class="menu column is-5-desktop is-12-mobile is-paddingless">
+                <div v-if="isActive && sp" class="menu column is-5-desktop is-12-mobile is-paddingless">
                   <ul  class="sp-menu" >
                     <div class="main-wrapper">
                       <div class="flex-item">
