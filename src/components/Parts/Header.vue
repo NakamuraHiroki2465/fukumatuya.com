@@ -50,8 +50,8 @@
 
                   </ul>
                 </div>
-                <div v-if="isActive && sp" class="menu column is-5-desktop is-12-mobile is-paddingless">
-                  <ul  class="sp-menu">
+                <div :class="{none:!isActive && sp}" class="menu column is-5-desktop is-12-mobile is-paddingless">
+                  <ul  class="sp-menu" >
                     <div class="main-wrapper">
                       <div class="flex-item">
                         <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">トップページ</p></router-link>
@@ -76,7 +76,6 @@
           </template> 
         </div>
     </header>
-
 </template>
 <script>
 export default {
@@ -318,13 +317,9 @@ header{
         width:100vw;
         height:100vh;
         left:0;
-        right:0;
         top:0;
-        position:absolute;
         background-color:#660000;
         position:fixed;
-        margin:auto;
-        margin-left:0;
         z-index:500;
         li{
           height:60px;
@@ -402,5 +397,8 @@ header{
 }
 .is-small{
   font-size:1rem;
+}
+.none{
+  display:none;
 }
 </style>

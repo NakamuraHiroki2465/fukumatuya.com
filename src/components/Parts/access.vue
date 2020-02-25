@@ -73,9 +73,10 @@ h4{
         width:100%;
     }
     .map-wrapper{
-    white-space:nowrap;
-    padding-bottom:10px;
-    margin-bottom:10px;
+        white-space:nowrap;
+        padding-bottom:10px;
+        width:100%;
+        margin-bottom:10px;
     @include sp(){
         width:90%;
         margin:auto;
@@ -99,6 +100,12 @@ h4{
   }
 }
 .map{
+    @include md(){
+        width:100%;
+    }
+    @include sp(){
+        width:100%;
+    }
     .bus-wrapper,.car-wrapper{
         border: 2px solid brown;
         position:relative;
@@ -151,21 +158,37 @@ h4{
 .flex-wrap{
     position:relative;
     margin-bottom:10px;
+    @include sp(){
+        width:100;
+        margin:0;
+    }
     .map-wrapper{
         position:relative;
         z-index:499;
-        min-width:400px;
         @include lg(){
             margin-right:10px;
+            min-width:400px;
         }
         @include md(){
             margin-right:10px;
+            min-width:400px;
         }  
+        @include sp(){
+            width:100%;
+        }
     }
     .googlemap{
         position:relative;
         z-index:500;
-        min-width:400px;
+        @include lg(){
+            min-width:400px;
+        }
+        @include md(){
+            min-width:400px;
+        }
+        @include sp(){
+            min-width:100%;
+        }
     }
 }
 </style>

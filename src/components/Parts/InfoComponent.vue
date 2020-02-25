@@ -45,8 +45,8 @@
                         <router-link :to='message.url' tag="a" class="column is-10 is-offset-1 list" >
                             <span></span>
                             <span></span>
-                            <div v-for="detail in message.detail" :key="detail">
-                                <a  style="color:black;" v-text="detail"></a>
+                            <div v-for="detail in message.detail" :key="detail.text">
+                                <a :href="detail.number" style="color:black;" v-text="detail.text"></a>
                             </div>
                         </router-link> 
                     </ul>
@@ -180,6 +180,9 @@ export default {
     margin:auto;
     height:100px;
     padding-top:30px;
+    @include sp(){
+        width:100%;
+    }
     .list{
         border:3px solid brown;
         text-align:center;
@@ -225,7 +228,7 @@ export default {
 .detail{
     width:100%;
     @include sp(){
-        width:50%;
+        width:80%;
     }
 }
   .absolute{

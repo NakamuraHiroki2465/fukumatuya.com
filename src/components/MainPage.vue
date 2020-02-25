@@ -18,7 +18,7 @@
         </div>
         <div class="detail-info">
             <div class="detail columns is-mobile" v-for="info in infos" :key="info.name">
-                <p class="column is-3 is-3-mobile is-offset-1-mobile info_name" v-text="info.name"></p>
+                <p class="column is-3 is-3-mobile  info_name" v-text="info.name"></p>
                 <p class="column is-9 is-8-mobile" v-text="info.value"></p>
             </div>
         </div>
@@ -42,8 +42,14 @@ export default {
                     frontimage:require('@/assets/images/enkai-basic.jpg'),
                     frontalt:"宴会場スタンダードコース",
                     detail:[
-                        'ご予約はこちらまで',
-                        '090-1209-9777'
+                        {
+                            text:'ご予約はこちらまで',
+                            number:'tel:09012099777'
+                        },
+                        {
+                            text:'090-1209-9777',
+                        }
+                        
                     ],
                     url:'',
                     room:'お部屋をみる'
@@ -54,7 +60,11 @@ export default {
                     mainMessage:"創業は120年前。当時から伝統を守りながら、太平山の麓で懐かしみのある味を提供しております。太平山へ観光や登山で訪れた人々の疲れを癒し、時間を忘れてゆったりとできます。",
                     frontimage:require('@/assets/images/greeting-wrapper.jpg'),
                     frontalt:"店舗外観",
-                    detail:["メニュー詳細・料金一覧"],
+                    detail:[
+                            {
+                                text:"メニュー詳細・料金一覧"
+                            }
+                        ],
                     url:'/lunch',
                     room:'店内の様子'
                 }
@@ -104,6 +114,9 @@ export default {
 .sub-info{
     margin-top:50px;
     width:100%;
+    @include sp(){
+        margin:0;
+    }
     .aboutfukumatuya,.oohira-san{
         position:relative;
         cursor:pointer;
@@ -123,8 +136,10 @@ export default {
     border-bottom:1px solid brown;
     font-weight:bold;
     width:100%;
+    margin:0!important;
     .info_name{
         color:brown;
+        margin-left:10px;
     }
 }
 .detail-info{
