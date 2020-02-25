@@ -13,7 +13,7 @@
                     <h1  class="has-text-centered">{{message.title}}</h1>
                     <p class="has-text-left">{{message.subexplain}}</p>
                 </div>
-                <div class="flex-wrapper columns">
+                <div class="flex-wrapper">
                     <div class="container-image">
                         <div class="front-image">
                             <img  :src="message.frontimage" :alt="message.frontalt">

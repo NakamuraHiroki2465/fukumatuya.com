@@ -141,10 +141,16 @@ header{
     @include sp(){
       width:100%;
     }
+    @include md(){
+      width:100%;
+    }
     .header-main{
-      padding:0 0 0 50px!important;
+      padding:0 0 0 50px;
       height:100%;
       width:inherit;
+      @include md(){
+        padding:0 0 0 10px !important;
+      }
       @include sp(){
         margin:0;
         padding:20px 0!important;
