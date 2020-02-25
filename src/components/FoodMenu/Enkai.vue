@@ -4,6 +4,16 @@
         <dinnerdetail :header="header" :datas="datas"></dinnerdetail>
         <!--ページのメインの部分-->
         <dinnermenu :datas="dinnermenu"></dinnermenu>
+        <div class="room">
+            <div class="room__title__container">
+                <h2 class="room__title">
+                    個室のご案内
+                </h2>
+            </div>
+            <div class="room__content__container">
+                <p>当店のお部屋は完全個室となっております。そのため、他のお客様を気にすることなく、ゆったりとお食事をお楽しみいただけます。また、カラオケも設置しております。</p>
+            </div>
+        </div>
     </div>
 </template>
 <script>

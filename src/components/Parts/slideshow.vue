@@ -8,7 +8,7 @@
         :arrows="false" 
         :fixed-height="true"
         autoplay
-        transition-speed="1000"
+        transition-speed="250"
     >
         <vueper-slide
          v-for="(url,i) in urls" 

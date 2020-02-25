@@ -68,7 +68,7 @@ h1{
     }
 }
 .wrap{
-    width:80%;
+    width:80%!important;
     margin:auto;
     font-weight:bold;
     margin: 50px auto 0 auto;

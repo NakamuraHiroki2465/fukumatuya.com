@@ -90,34 +90,6 @@ export default {
 @import '@/assets/variables.scss';
 .scroll-wrapper{
     position:relative;
-    &:before{
-        content:'';
-        position:absolute;
-        top:80%;
-        left:20%;
-        width:2px;
-        height:200px;
-        background-color:black;
-        z-index:500;
-        @include sp(){
-            height:100px;
-        }
-    }
-    &:after{
-        content:'';
-        position:absolute;
-        top:calc(80% + 200px);
-        left:20%;
-        width:15px;
-        height:2px;
-        background-color:black;
-        z-index:500;
-        transform:translateX(-100%)rotate(45deg);
-        transform-origin:100% 100%;
-        @include sp(){
-            top:calc(80% + 100px);
-        }
-    }
 }
 .scroll{
     overflow:hidden;
@@ -127,31 +99,11 @@ export default {
             display:none;
         }
     }
-    &:before{
-        content:'Scroll';
-        position:absolute;
-        font-size:2.5rem;
-        color:white;
-        top:80%;
-        left:calc(20% + 30px);
-        z-index:500;
-    }
-    &:after{
-        content:'';
-        position:absolute;
-        top:80%;
-        left:20%;
-        width:2px;
-        height:200px;
-        background-color:white;
-        z-index:500;
-        @include sp(){
-            height:100px;
-        }
-    }
+    
 }
 .sub-info{
     margin-top:50px;
+    width:100%;
     .aboutfukumatuya,.oohira-san{
         position:relative;
         cursor:pointer;
@@ -176,13 +128,13 @@ export default {
     }
 }
 .detail-info{
-    width:50%;
+    width:80%;
     margin:100px auto 0 auto;
     @include sp(){
         width:100%;
     }
     @include md(){
-        width:70%;
+        width:90%;
     }
 }
 .main-wrapper{

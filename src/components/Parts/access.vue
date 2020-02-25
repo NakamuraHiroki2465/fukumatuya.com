@@ -60,7 +60,7 @@ h4{
     }
 }
 .wrap{
-    width:60%;
+    width:80%;
     margin:auto;
     font-weight:bold;
     margin: 50px auto 0 auto;
