@@ -1,22 +1,41 @@
 <template>
 <div class="wrap">
     <h4>【アクセス】</h4>
-    <div class="flex-wrap columns">
-        <div class="map-wrapper column is-6 is-6-tablet ">
+    <div class="flex-wrap">
+        <div class="map-wrapper">
             <div class="map">
                 <div class="bus-wrapper">
                     <img class="train icon" src="@/assets/images/train_icon.svg" alt="電車でお越しの方">
                     <img class="vector icon" src="@/assets/images/vector_icon.svg" alt="矢印">
                     <img class="bus icon" src="@/assets/images/bus_icon.svg" alt="バスでお越しの方">
-                    <p  v-for="(bus,index) in access.busInfo" v-text="bus" :key="index"></p>
+                    <p style="font-size:1.5rem!important; height:3rem!important; line-height:3rem!important;">公共交通機関をご利用のお方</p>
+                    <p>栃木駅</p>
+                    <p>↓</p>
+                    <p>バス</p>
+                    <p>(関東自動車・國學院前方面（倭町経由）)</p>
+                    <p>↓</p>
+                    <p>國學院前下車（終点）</p>
+                    <p>↓</p>
+                    <p>県道269号線を太平山方面へ直進</p>
+                    <p style="margin-top:1.5rem!important; font-size:1.2rem!important">所要時間&nbsp;:&nbsp;栃木駅から20分ほど</p>
                 </div>
                 <div class="car-wrapper">
                     <img class="car icon" src="@/assets/images/car_icon.svg" alt="車でお越しの方">
-                    <p  v-for="(car,index) in access.carInfo" :key="index" class="prewrap" v-text="car"></p>
+                    <p style="font-size:1.5rem!important; height:3rem!important; line-height:3rem!important;">自動車でお越しのお方</p>
+                    <p>東北自動車道&nbsp;栃木I.Cを下車</p>
+                    <p>栃木方面に出る</p>
+                    <p>↓</p>
+                    <p>県道309号線(栃木バイパス)を南下する</p>
+                    <p>↓</p>
+                    <p>片柳町5丁目の交差点を右折<span v-if="!sp">（目印:マクドナルド）</span></p>
+                    <p v-if="sp">（目印&nbsp;:&nbsp;マクドナルド）</p>
+                    <p>↓</p>
+                    <p>県道269号に入り、直進</p>
+                    <p style="margin-top:1.5rem!important; font-size:1.2rem!important">所要時間&nbsp;:&nbsp;栃木I.Cから20分ほど</p>
                 </div>
             </div>
         </div>
-        <div class="googlemap column is-6  is-5-tablet">
+        <div class="googlemap">
             <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3212.90404739911!2d139.6964836156249!3d36.36310299988021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f4764d5fca5fb%3A0xe7a985618f29356f!2z56aP5p2-5a62!5e0!3m2!1sja!2sjp!4v1575109150522!5m2!1sja!2sjp" width="500" height="500" frameborder="0"  allowfullscreen=""></iframe>
         </div>
     </div>
@@ -27,19 +46,6 @@ export default {
 
     data:function(){
         return{
-            access:{
-              busInfo:[
-                "バス：JR・東武　栃木駅発（関東自動車）",
-                "→　國學院前方面 (倭町経由)",
-                "→　県道269号線を太平山方面へ直進",
-                "所要時間：約20分"
-              ],
-              carInfo:[
-                  "車でお越しの方: 東北自動車道 栃木I.Cを下車、",
-                  "県道309号線（栃木バイパス）を南下して",
-                  "片柳町5丁目の交差点（目印:マクドナルド）を右折"
-              ]
-            },
             is60:false
         }
     }
@@ -75,7 +81,7 @@ h4{
     .map-wrapper{
         white-space:nowrap;
         padding-bottom:10px;
-        width:100%;
+        margin-left:10px;
         margin-bottom:10px;
     @include sp(){
         width:90%;
@@ -100,11 +106,17 @@ h4{
   }
 }
 .map{
+    justify-content:space-between;
+    width:100%;
+    @include lg(){
+        display:flex;
+    }
     @include md(){
-        width:100%;
+        display:flex;
     }
     @include sp(){
-        width:100%;
+        width:90%;
+        margin:auto;
     }
     .bus-wrapper,.car-wrapper{
         border: 2px solid brown;
@@ -112,25 +124,38 @@ h4{
         height:auto;
         padding-top:50px;
         padding-bottom:30px;
+        min-width:380px;
+        width:45%;
         @include lg(){
-            min-width:400px;
+            min-width:380px;
         }
         @include md(){
-            min-width:400px;
+            min-width:380px;
+        }
+        @include sp(){
+            width:90%;
+            margin:20px auto;
         }
         p{
             font-size:1rem;
+            @include lg(){
+                padding-left:10px;
+            }
+            @include md(){
+                padding-left:10px;
+            }
         }
     }
-    .car-wrapper{
-        margin-top:10px;
-    }
+
 
 }
 .googlemap{
+    padding:12px;
+    flex:auto;
+    height:500px;
     iframe{
         width:100%;
-        height:300px;
+        height:500px;
         @include lg(){
             height:100%;
         }
@@ -159,7 +184,7 @@ h4{
     position:relative;
     margin-bottom:10px;
     @include sp(){
-        width:100;
+        width:100%;
         margin:0;
     }
     .map-wrapper{
@@ -182,9 +207,11 @@ h4{
         z-index:500;
         @include lg(){
             min-width:400px;
+            
         }
         @include md(){
             min-width:400px;
+            
         }
         @include sp(){
             min-width:100%;

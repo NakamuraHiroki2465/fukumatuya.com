@@ -1,6 +1,6 @@
 <template>
     <div class="about-wrapper" id="menu">
-        <div class="vfor" v-for="(data,index) in this.datas" :key="data.title" :style="data.menu_style">
+        <div class="vfor" v-for="(data) in this.datas" :key="data.title" :style="data.menu_style">
             <div class="wrapper-60">
                 <div class="vfor_container">
                     <h2  class="title" v-text="data.title"></h2>
@@ -17,15 +17,20 @@
                         <div class="image-container column is-6">
                             <div class="image-wrapper">
                                 <div class="cp_cssslider">
+                                    <!--
                                     <input type="radio" :name="data.title" :id="data.alt + index" checked/>
                                     <label :for="data.alt + index"><img :src="data.img" /></label>
+                                    -->
                                     <img :src="data.img" />
+                                    
+                                    <!--
                                     <input type="radio" :name="data.title" :id="data.alt + 2"/>
                                     <label :for="data.alt + 2"><img :src="data.img" /></label>
                                     <img :src="data.img" />
                                     <input type="radio" :name="data.title" :id="data.alt + 3"/>
                                     <label :for="data.alt + 3"><img :src="data.img" /></label>
                                     <img :src="data.img" />
+                                    -->
                                 </div>
                             </div>
                         </div>

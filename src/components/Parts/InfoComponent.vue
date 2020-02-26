@@ -11,7 +11,6 @@
             >
                 <div class="title">
                     <h1  class="has-text-centered">{{message.title}}</h1>
-                    <p class="has-text-left">{{message.subexplain}}</p>
                 </div>
                 <div class="flex-wrapper">
                     <div class="container-image">
@@ -88,8 +87,8 @@ export default {
         content:'';
         position:absolute;
         top:150%;
-        left:10%;
-        width:70vw;
+        left:0;
+        width:100%;
         height:1px;
         background-color:brown;
         @include sp(){
@@ -99,6 +98,7 @@ export default {
     }
 }
 .container-text{
+    margin-right:10px;
     @include sp(){
         width:100%;
     }
@@ -111,6 +111,7 @@ export default {
     font-weight:bold;
     .subtitle{
         text-align:center;
+        margin:0;
     }
     @include lg(){
         width:600px;
@@ -137,42 +138,36 @@ export default {
 }
 
 .container-image{
-    margin:auto;
-    padding:30px 0;
-    width:300px;
+    margin:auto 10px;
+    overflow:hidden;
+    height:100%;
+    flex:auto;
     @include md(){
         display:none;
     }
     @include sp(){
         display:none;
     }
-    .front-image,.after-image{
-        position:relative;
-        width:100%;
+    .front-image{
         text-align:center;
         img{
-            max-width:600px;
-            width:300px;
+            width:800px!important;
+            display:block;
         }
         @include sp(){
             margin:auto;
             img{
                 margin:auto;
-                width:200px;
             }
         }
         @include md(){
             img{
                 margin:auto;
-                width:200px;
             }
         }
     }
     .front-image{
         z-index:99;
-    }
-    .after-image{
-        z-index:100;
     }
 }
 .container-detail{

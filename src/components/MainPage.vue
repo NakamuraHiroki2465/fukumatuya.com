@@ -17,9 +17,21 @@
             </router-link>
         </div>
         <div class="detail-info">
-            <div class="detail columns is-mobile" v-for="info in infos" :key="info.name">
-                <p class="column is-3 is-3-mobile  info_name" v-text="info.name"></p>
-                <p class="column is-9 is-8-mobile" v-text="info.value"></p>
+            <div class="detail columns is-mobile" >
+                <p class="column is-3 is-3-mobile  info_name">所在地</p>
+                <p class="column is-9 is-8-mobile">栃木県栃木市平井町681</p>
+            </div>
+            <div class="detail columns is-mobile" >
+                <p class="column is-3 is-3-mobile  info_name" >駐車場</p>
+                <p class="column is-9 is-8-mobile" >あじさい坂駐車場:約50台,<br v-if="sp">店鋪正面:15台ほど</p>
+            </div>
+            <div class="detail columns is-mobile">
+                <p class="column is-3 is-3-mobile  info_name" >営業時間</p>
+                <p class="column is-9 is-8-mobile">9:00&nbsp;〜&nbsp;18:00 <br v-if="sp">(予約時の時間は異なります)</p>
+            </div>
+            <div class="detail columns is-mobile">
+                <p class="column is-3 is-3-mobile  info_name">定休日</p>
+                <p class="column is-9 is-8-mobile">不定休</p>
             </div>
         </div>
         <access>
@@ -69,24 +81,6 @@ export default {
                     room:'店内の様子'
                 }
             ],
-            infos:[
-                {
-                    name:"所在地",
-                    value:"栃木県栃木市平井町681"
-                },
-                {
-                    name:"駐車場",
-                    value:"あじさい坂駐車場:約50台,店鋪正面:15台ほど"
-                },
-                {
-                    name:"営業時間",
-                    value:"9:00〜18:00 (予約時の時間は異なります))"
-                },
-                {
-                    name:"定休日",
-                    value:"不定休"
-                }
-            ]
         }
     },
     components:{
