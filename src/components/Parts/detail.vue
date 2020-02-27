@@ -1,10 +1,13 @@
 <template>
     <div class="about-wrapper">
-        <div class="wrapper-60">
-            <div class="main-title">
-                <img :src='header.img' alt="メイン背景">
-                <h1 class="main-title" v-text="header.title"></h1>
+        <div class="main-title">
+          <img :src='header.img' alt="メイン背景">
+          <h1 class="main-title" v-text="header.title"></h1>
+            <div class="site-map">
+                <p><router-link tag="a" to="/" style="color:white;">トップ</router-link>&nbsp;>&nbsp;<router-link tag="a" to="/lunch" style="color:white;">茶屋について</router-link></p>
             </div>
+        </div>
+        <div class="wrapper-60">
             <div class="vfor" v-for="data in this.datas" :key="data.title">
                 <h2  class="title" v-text="data.title"></h2>
                 <div class="center-wrapper columns">
@@ -36,12 +39,15 @@ export default {
     margin:100px auto;
 }
 .main-title{
-    height:200px;
-    margin-top:100px;
+    height:300px;
+    overflow:hidden;
     margin-bottom:100px;
     position:relative;
+    width:100%;
     img{
         width:100%;
+        min-width:990px;
+        min-height:300px;
         top:50%;
         left:50%;
         transform:translate(-50%,-50%);
@@ -51,8 +57,8 @@ export default {
         font-size:2.5rem;
         font-weight:bold;
         text-align:center;
-        height:200px;
-        line-height:200px;
+        height:300px;
+        line-height:300px;
         color:white;
     }
 }

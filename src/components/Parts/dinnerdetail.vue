@@ -1,19 +1,19 @@
 <template>
     <div class="about-wrapper">
         <div class="main-title">
-            <img :src='header.img' alt="メイン背景">
+            <img src='@/assets/images/fukumatu_food_title.png' alt="メイン背景">
             <h1 class="main-title">会席料理について</h1>
             <div class="site-map">
-                <p><router-link tag="a" to="/" style="color:white;">トップ</router-link> > <router-link tag="a" to="/dinner" style="color:white;f">会席料理</router-link></p>
+              <p><router-link tag="a" to="/" style="color:white;">トップ</router-link>&nbsp;>&nbsp;<router-link tag="a" to="/dinner" style="color:white;">会席料理について</router-link> </p>
             </div>
         </div>
         <div class="wrapper-60">
-            <div class="vfor" v-for="data in this.datas" :key="data.title">
+            <div class="vfor">
                 <h2  class="title"><span style="font-size:2rem!important;">見・香・味</span>&nbsp;全てを堪能する</h2>
                 <div class="center-wrapper flex-wrapper">
                     <div class="about-container">
                         <div class="about-text ">
-                            <p v-text="data.text"></p>
+                            <p>店主は日比谷・赤坂の料亭で厳しい修行を積んだ板前。直接市場へ出向いて、厳選した食材を仕入れて一から吟味して調理しております。タイトルにあります様に、お客様に五感で料理を楽しんでいただけるよう、どの料理をとっても店主の手作りにこだわり、とにかく美食を追求しております。</p>
                         </div>
                         <div class="for_next">
                             <div class="detail for_access course ">
@@ -29,13 +29,17 @@
                                 </a>
                             </div>
                         </div>
-                        <h2 class="title sub" v-text="data.subtitle"></h2>
-                        <p v-text="data.subtext"></p>
+                        <h2 class="title sub">ご相談について</h2>
+                        <p>福松家ではそれぞれのお客様の要望に沿えるよう、できうる限りのご相談に乗ります。まずはお電話から、お気軽にご相談ください。</p>
                         <div class="sub-text">
                             <div class="about-text">
-                                <div class="example" v-for="subexample in data.subexamples" :key="subexample.title">
-                                    <p class="subtitle" v-text="subexample.title" ></p>
-                                    <p class="subtext" v-text="subexample.text"></p>
+                                <div class="example" >
+                                    <p class="subtitle">生物が食べられないお客様</p>
+                                    <p class="subtext">例：代わりに焼き魚や煮物、火を通した料理を提供いたしました。</p>
+                                </div>
+                                <div class="example">
+                                    <p class="subtitle">病気で食事が制限されている</p>
+                                    <p class="subtext">例：塩分を抜いた料理を提供いたしました。玉子焼きでは出汁を抜き、焼き鳥はタレをつけず焼くなどを致しました。</p>
                                 </div>
                             </div>
                         </div>
@@ -112,31 +116,6 @@ export default {
     @include sp(){
         font-size:2rem!important;
     }
-    .site-map{
-        width:100%;
-        height:30px;
-        background-color:black;
-        position:absolute;
-        top:100%;
-        transform:translateY(-100%);
-        p{
-            color:rgba(255,255,255,0.7);
-            height:30px;
-            line-height:30px;
-            a{
-                font-size:1rem!important;
-            }
-            @include sp(){
-                padding-left:20px;
-            }
-            @include md(){
-                padding-left:10vw;
-            }
-            @include lg(){
-                padding-left:20vw;
-            }
-        }
-    }
     img{
         min-width:990px;
         width:100%;
@@ -173,12 +152,13 @@ export default {
     }
 }
 .about-container{
-    width:500px;
+    width:90%;
     @include md(){
-        min-width:400px;
+        min-width:500px;
     }
     @include lg(){
-        min-width:400px;
+        min-width:500px;
+        max-width:600px;
     }
     @include sp(){
         width:100%;
@@ -215,6 +195,7 @@ export default {
 }
 .center-wrapper{
     justify-content:space-between;
+    width:inherit;
 }
 .column-wrapper{
     height:100%;
@@ -280,4 +261,5 @@ export default {
 .flex-wrapper{
     display:flex;
 }
+
 </style>

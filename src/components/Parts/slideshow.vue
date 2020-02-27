@@ -1,4 +1,5 @@
 <template>
+<div>
     <vueper-slides 
         fade
         slide-content-outside="top" 
@@ -19,6 +20,10 @@
         >
         </vueper-slide>
     </vueper-slides>
+    <div class="site-map">
+       <p><router-link tag="a" to="/" style="color:white;">トップ</router-link></p>
+    </div>
+</div>
 </template>
 <script>
 import{

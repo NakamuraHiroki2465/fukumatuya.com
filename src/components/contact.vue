@@ -1,21 +1,32 @@
 <template>
-    <div class="wrapper-60">
-        <div class="main-title">
-            <img :src="header.img" :alt="header.alt">
-            <h1 class="main-title" v-text="header.title"></h1>
+<div>
+    <div class="main-title">
+        <img src="@/assets/images/enkai-jyou.jpg" alt="お問い合わせ">
+        <h1 class="main-title">お問い合わせ</h1>
+        <div class="site-map">
+            <p><router-link tag="a" to="/" style="color:white;">トップ</router-link>&nbsp;>&nbsp;<router-link tag="a" to="/contact" style="color:white;">お問い合わせ</router-link></p>
         </div>
-        <div class="vfor" v-for="data in this.datas" :key="data.title">
-            <h2 class="title" v-text="data.title"></h2>
+    </div>
+    <div class="wrapper-60">
+        <div class="vfor">
+            <h2 class="title">栃木市で美食をお求めの方は福松家へご相談ください</h2>
             <div class="center-wrapper">
                 <div class="about-container columns">
                     <div class="about-text column is-6">
-                        <p v-text="data.text"></p>
+                        <p>福松家のホームページをご覧いただき、誠に有難うございます。<br>当店は栃木市でも屈指の美食、創作料理にこだわる会席料理店です。<br>それぞれのお客様の要望に沿えるよう、できうる限りのご相談に乗ります。まずはお電話から、お気軽にご相談ください。</p>
                     </div>
                     <div class="column-wrapper column is-6">
-                        <div class="detail  columns is-multiline" v-for="store in stores" :key="store.title">
-                            <p class="column is-2-desktop is-12-tablet info_name" v-text="store.title"></p>
+                        <div class="detail  columns is-multiline">
+                            <p class="column is-2-desktop is-12-tablet info_name">営業時間</p>
                             <div class="detail-container column is-10-desktop is-12-tablet is-offset-1-mobile">
-                                <p v-for="content in store.contents" :key="content" v-text="content"></p>
+                                <p>茶屋&nbsp;:&nbsp;10:00&nbsp;～&nbsp;18:00</p>
+                                <p>宴会&nbsp;:&nbsp;11:00&nbsp;～&nbsp;22:00（要予約）</p>
+                            </div>
+                        </div>
+                        <div class="detail  columns is-multiline">
+                            <p class="column is-2-desktop is-12-tablet info_name">定休日</p>
+                            <div class="detail-container column is-10-desktop is-12-tablet is-offset-1-mobile">
+                                <p>不定休</p>
                             </div>
                         </div>
                     </div>
@@ -28,39 +39,8 @@
             <p class="store_time">営業時間 : 10:00〜18:00</p>
         </div>
     </div>
+</div>
 </template>
-<script>
-export default {
-    data:function(){
-        return{
-            header:{
-                img:require('@/assets/images/enkai-jyou.jpg'),
-                alt:'お問い合わせ',
-                title:'お問い合わせ'
-            },
-            datas:[
-                {
-                    title:'栃木市で会席料理をお求めの方は福松家へ是非ご相談ください',
-                    text:'当店ホームページをご覧いただき、誠に有難うございます。当店は栃木市でも屈指の美食、創作料理にこだわる会席料理店です。それぞれのお客様の要望に沿えるよう、できうる限りのご相談に乗ります。まずはお電話から、お気軽にご相談ください。',
-                }
-            ],
-            stores:[
-                {
-                    title:'営業時間',
-                    contents:["茶屋: 10:00 〜 18:00/",
-                             "宴会: 11:00 〜　22:00(要予約)"
-                             ]
-                },
-                {
-                    title:'定休日',
-                    contents:['不定休']
-                }
-            ]
-
-        }
-    }
-}
-</script>
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
 .vfor{
@@ -68,7 +48,6 @@ export default {
 }
 .main-title{
     height:300px;
-    margin-top:50px;
     margin-bottom:50px;
     position:relative;
     overflow:hidden;

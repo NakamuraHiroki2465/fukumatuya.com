@@ -3,6 +3,9 @@
         <div class="scroll-wrapper">
             <slideShow class="scroll">
             </slideShow>
+            <div class="site-map">
+              <p><router-link tag="a" to="/" style="color:white;">トップ</router-link> </p>
+            </div>
         </div>
         <InfoComponent :messages="messages">
         </InfoComponent>
@@ -92,6 +95,7 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
+
 .scroll-wrapper{
     position:relative;
 }
@@ -150,4 +154,29 @@ export default {
     width:100vw;
     overflow:hidden;
 }
+    .site-map{
+        width:100%;
+        height:30px;
+        background-color:black;
+        position:absolute;
+        top:calc(100% + 1.2rem);
+        transform:translateY(-100%);
+        p{
+            color:rgba(255,255,255,0.7);
+            height:30px;
+            line-height:30px;
+            a{
+                font-size:1rem!important;
+            }
+            @include sp(){
+                padding-left:20px;
+            }
+            @include md(){
+                padding-left:10vw;
+            }
+            @include lg(){
+                padding-left:20vw;
+            }
+        }
+    }
 </style>
