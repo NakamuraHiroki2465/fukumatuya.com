@@ -3,7 +3,8 @@
         <img class = "bento-header" src="@/assets/images/bento-header.png" alt="お弁当メニュー">
         <div class = "bento-header-explain">
             <p class = "bento-header-explain__content">太平山名物などを用いたお弁当をお作り致します。お弁当をお求めのお客様は下記電話までお問い合わせください。</p>
-            <p class = "bento-header-explain__content"><span>*出来立てをご提供致したく、ご注文をいただいてから調理致します。お時間は10&nbsp;～20分ほどいただきます</span></p>
+            <p class = "bento-header-explain__content"><span>*出来立てをご提供致したく、ご注文をいただいてから調理致します。お時間は10&nbsp;～20分ほどいただきます。</span></p>
+            <p class = "bento-header-explain__content"><span>*内容は日によって多少異なる場合がございます。ご注文の際にお問い合わせください。</span></p>
         </div>
         <div class="reservation">
             <p class="phone_index">お問い合わせはこちらまで</p>
@@ -18,7 +19,7 @@
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">太平山名物焼き鳥と玉子焼きを使った贅沢なスペシャルセットになります。</P>
                     <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/草団子&nbsp;/五穀米&nbsp;/山菜&nbsp;/そら豆&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/草団子&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">900円<span>(税込み)</span></h3>
@@ -36,7 +37,7 @@
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">太平山名物玉子焼をお得に食べられるセットになっております</P>
                     <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/玉子焼き&nbsp;/草団子&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__content">/玉子焼き&nbsp;/草団子&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">600円<span>(税込み)</span></h3>
@@ -54,7 +55,7 @@
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">太平山名物焼き鳥をお得に食べられるセットになっております</P>
                     <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/草団子&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/草団子&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">800円<span>(税込み)</span></h3>
@@ -72,7 +73,7 @@
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">サクッとした食感の立田揚げにスペシャルなねぎダレを添えてお食べください</P>
                     <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/草団子&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">700円<span>(税込み)</span></h3>
