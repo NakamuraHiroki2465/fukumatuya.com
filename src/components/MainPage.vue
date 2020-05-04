@@ -7,6 +7,15 @@
               <p><router-link tag="a" to="/" style="color:white;">トップ</router-link> </p>
             </div>
         </div>
+        <div class = "bento">
+            <div class = "bento__wrapper">
+                
+                <img src="@/assets/images/bento.png" alt="お弁当トップ">
+                <router-link tag = "div" to = "/bento" class = "detail-wrapper">
+                    <router-link tag= "a" to="/bento">お弁当詳細はこちら</router-link>
+                </router-link>
+            </div>      
+        </div>
         <InfoComponent :messages="messages">
         </InfoComponent>
         <div class="sub-info columns is-multiline">
@@ -179,4 +188,47 @@ export default {
             }
         }
     }
+.bento{
+    width:80%;
+    margin:150px auto 0 auto;
+    @include sp(){
+        width:90%;
+    }
+    &__wrapper{
+        position:relative;
+        img{
+            display:block;
+            margin:auto;
+        }
+        .detail-wrapper{
+            position:relative;
+            height:3rem;
+            margin:50px auto;
+            @include sp(){
+                width:80%;
+            }
+            @include md(){
+                width:50%;
+            }
+            @include lg(){
+                width:600px;
+                height:3.5rem;
+            }
+            padding:10px 15px;
+            background-color:rgba(0,0,0,0.8);
+            &:hover{
+                cursor:pointer;
+            }
+        }
+        a{
+            z-index:10;
+            font-size:1.5rem;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            color:white;   
+        }
+    }
+}
 </style>

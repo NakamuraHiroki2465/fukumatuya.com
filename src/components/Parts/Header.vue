@@ -39,6 +39,10 @@
                       <router-link to="/about" tag="li"><img class="main" src="@/assets/images/menu/about.png" alt="福松家について"></router-link>
           
                       <!-- サブメニュー -->
+                      <router-link to="/bento" class="vertical sub" tag="li">
+                        <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お弁当メニュー">
+                        <p class="is-small">お弁当メニュー</p>
+                      </router-link>
                       <router-link to="/contact" class="vertical sub" tag="li">
                         <img  class="icon" src="@/assets/images/bottomvector.svg" alt="お問い合わせ">
                         <p class="is-small">お問い合わせ</p>
@@ -61,6 +65,8 @@
                         <router-link to="/lunch" tag="li" class="main_menu"><p @click="hasMenu">茶屋紹介</p></router-link>
 
                         <router-link to="/dinner" tag="li" class="main_menu"><p @click="hasMenu">会席料理紹介</p></router-link>
+
+                        <router-link to="/bento" tag="li" class="main_menu"><p @click="hasMenu">お弁当紹介</p></router-link>
                       </div>
                     </div>
                     <div class="sub-wrapper">
