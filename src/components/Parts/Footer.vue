@@ -5,7 +5,7 @@
             <h1>福松家</h1>
             <p>〒328-0054</p>
             <p>栃木県栃木市平井町681番地</p>
-            <p class="Tel">090-1209-9777</p>
+            <p class="Tel">0282-22-1827</p>
             <a  href="https://www.instagram.com/fukumatuya_29028/">
               Instagram
               <img src="@/assets/images/instagram.svg" alt="インスタグラム">
