@@ -18,7 +18,7 @@
                 </div>
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">太平山名物焼き鳥と玉子焼きを使った贅沢なスペシャルセットになります。</P>
-                    <p class = "bento__explain__food__title">[内容物]</p>
+                    <p class = "bento__explain__food__title">[内容]</p>
                     <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/草団子&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
@@ -36,8 +36,8 @@
                 </div>
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">太平山名物玉子焼をお得に食べられるセットになっております</P>
-                    <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/玉子焼き&nbsp;/草団子&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__title">[内容]</p>
+                    <p class = "bento__explain__food__content">/玉子焼き&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">600円<span>(税込み)</span></h3>
@@ -54,8 +54,8 @@
                 </div>
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">太平山名物焼き鳥をお得に食べられるセットになっております</P>
-                    <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/草団子&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__title">[内容]</p>
+                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">800円<span>(税込み)</span></h3>
@@ -72,8 +72,8 @@
                 </div>
                 <div class = "bento__explain__food">
                     <p class = "bento__explain__food__index">サクッとした食感の立田揚げにスペシャルなねぎダレを添えてお食べください</P>
-                    <p class = "bento__explain__food__title">[内容物]</p>
-                    <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
+                    <p class = "bento__explain__food__title">[内容]</p>
+                    <p class = "bento__explain__food__content">/立田揚げ&nbsp;/味噌田楽&nbsp;/五穀米&nbsp;/山菜となめこの酢の物&nbsp;/漬物</P>
                 </div>
                 <div class = "bento__explain__price">
                     <h3 class = "bento__explain__price__content">700円<span>(税込み)</span></h3>
