@@ -54,32 +54,32 @@
 
                   </ul>
                 </div>
-                <div v-if="isActive && sp" class="menu column is-5-desktop is-12-mobile is-paddingless">
-                  <ul  class="sp-menu" >
-                    <div class="main-wrapper">
-                      <div class="flex-item">
-                        <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">トップページ</p></router-link>
-
-                        <router-link to="/about" tag="li" class="main_menu"><p @click="hasMenu">福松家の魅力</p></router-link>
-                        
-                        <router-link to="/lunch" tag="li" class="main_menu"><p @click="hasMenu">茶屋紹介</p></router-link>
-
-                        <router-link to="/dinner" tag="li" class="main_menu"><p @click="hasMenu">会席料理紹介</p></router-link>
-
-                        <router-link to="/bento" tag="li" class="main_menu"><p @click="hasMenu">お弁当紹介</p></router-link>
-                      </div>
-                    </div>
-                    <div class="sub-wrapper">
-                      <router-link  to="/contact" tag="li"><p @click="hasMenu">お問い合わせ</p></router-link>
-                      
-                      <router-link to="/access" tag="li"><p @click="hasMenu">アクセス</p></router-link>
-                    </div>
-                    <div class="instagram">
-                      <a href="https://www.instagram.com/fukumatuya_29028/">Follow Instagram</a>
-                    </div>
-                  </ul>
-                </div>
           </template> 
+        </div>
+        <div v-if="isActive && sp" class="menu is_fixed column is-5-desktop is-12-mobile is-paddingless">
+          <ul  class="sp-menu" >
+            <div class="main-wrapper">
+              <div class="flex-item">
+                <router-link to="/" tag="li" class="main_menu"><p @click="hasMenu">トップページ</p></router-link>
+
+                <router-link to="/about" tag="li" class="main_menu"><p @click="hasMenu">福松家の魅力</p></router-link>
+                
+                <router-link to="/lunch" tag="li" class="main_menu"><p @click="hasMenu">茶屋紹介</p></router-link>
+
+                <router-link to="/dinner" tag="li" class="main_menu"><p @click="hasMenu">会席料理紹介</p></router-link>
+
+                <router-link to="/bento" tag="li" class="main_menu"><p @click="hasMenu">お弁当紹介</p></router-link>
+              </div>
+            </div>
+            <div class="sub-wrapper">
+              <router-link  to="/contact" tag="li"><p @click="hasMenu">お問い合わせ</p></router-link>
+              
+              <router-link to="/access" tag="li"><p @click="hasMenu">アクセス</p></router-link>
+            </div>
+            <div class="instagram">
+              <a href="https://www.instagram.com/fukumatuya_29028/">Follow Instagram</a>
+            </div>
+          </ul>
         </div>
     </header>
 </template>
@@ -123,6 +123,13 @@ export default {
 @import '@/assets/variables.scss';
 @import '@/assets/menu-opnener.scss';
 
+.is_fixed{
+  position:fixed;
+  transform:translate3d(0,0,0);
+  height:100vh;
+  top:-6px;
+  margin:0;
+}
 header{
   position:relative;
   width:100%;
@@ -319,26 +326,6 @@ header{
           cursor:pointer;
         }
       }
-      .sp-menu{
-        width:100vw;
-        height:100vh;
-        left:0;
-        top:0;
-        background-color:#660000;
-        position:fixed;
-        z-index:500;
-        li{
-          height:60px;
-          line-height:60px;
-           &:hover{
-            cursor:pointer;
-          }
-        }
-        p{
-          text-align:center;
-          color:#c0c0c0;
-        }
-      }
     }
   }
 }
@@ -406,5 +393,22 @@ header{
 }
 .none{
   display:none;
+}
+.sp-menu{
+  width:100vw;
+  height:100vh;
+  background-color:#660000;
+  z-index:500;
+  li{
+    height:60px;
+    line-height:60px;
+      &:hover{
+      cursor:pointer;
+    }
+  }
+  p{
+    text-align:center;
+    color:#c0c0c0;
+  }
 }
 </style>
