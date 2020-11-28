@@ -10,17 +10,13 @@
                 <div class="bus-container">
                     <h2>公共交通機関をご利用の方</h2>  
                     <div class="bus-wrapper">
-                        <img class="train icon" src="@/assets/images/train_icon.svg" alt="電車でお越しの方">
-                        <img class="vector icon" src="@/assets/images/vector_icon.svg" alt="矢印">
-                        <img class="bus icon" src="@/assets/images/bus_icon.svg" alt="バスでお越しの方">
-                        <p  v-for="(bus,index) in access.busInfo" v-text="bus" :key="index"></p>
+                        <p v-for="(bus,index) in access.busInfo" v-text="bus" :key="index"></p>
                     </div>
                 </div>
                 <div class="car-container">
                     <h2>車でお越しの方</h2>
                     <div class="car-wrapper">
-                        <img class="car icon" src="@/assets/images/car_icon.svg" alt="車でお越しの方">
-                        <p  v-for="(car,index) in access.carInfo" :key="index" class="prewrap" v-text="car"></p>
+                        <p v-for="(car,index) in access.carInfo" :key="index" class="prewrap" v-text="car"></p>
                     </div>
                 </div>
             </div>
@@ -33,7 +29,6 @@ export default {
 
     data:function(){
         return{
-            
             access:{
               busInfo:[
                 "バス：JR・東武　栃木駅発（関東自動車）",
@@ -68,7 +63,7 @@ h1{
     }
 }
 .wrap{
-    width:80%!important;
+    width:80%;
     margin:auto;
     font-weight:bold;
     margin: 50px auto 0 auto;

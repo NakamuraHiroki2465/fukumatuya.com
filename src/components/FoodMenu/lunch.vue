@@ -1,7 +1,48 @@
 <template>
     <div class="lunch-wrapper">
-        <detail :datas="datas" :header="header"></detail>
-        <subdetail :subdatas="subdatas"></subdetail>
+        <div class="about-wrapper">
+            <div class="main-title">
+                <img src='@/assets/images/lunch_background.png' alt="福松家のランチ">
+                <h1 class="main-title">茶屋について</h1>
+                <div class="site-map">
+                <p><router-link tag="a" to="/" style="color:white;">トップ</router-link><span>&gt;</span><router-link tag="a" to="/lunch" style="color:white;">茶屋について</router-link></p>
+                </div>
+            </div>
+            <div class="wrapper-60">
+                <div class="vfor">
+                    <h2  class="title">太平山名物をご存知ですか？</h2>
+                    <div class="center-wrapper columns">
+                        <div class="about-container column is-7">
+                            <div class="about-text ">
+                                <p>昔、太平山では参拝者はお賽銭ではなくお米を奉納していました。そのお米をだんごとして参拝者に振舞ったことから太平山だんごは生まれました。<br>また、「夜泣き鳥は災いを呼ぶ」と言われており、夜に泣く鶏は神社に奉納されました。奉納された鶏は繁殖をし、それを参拝者に焼き鳥や玉子焼きとして振舞ったことから名物と呼ばれるようになりました。</p>
+                            </div>
+                        </div>  
+                        <div class="image column is-5">
+                            <img src='@/assets/images/shiro-dango1.jpeg' alt="料理長のご挨拶">
+                            <p>太平山名物・だんご（税込み300円）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-wrapper">
+            <div class="wrapper-60">
+                <div class="vfor">
+                    <h2  class="title">観光の合間に一息</h2>
+                    <div class="center-wrapper columns ">
+                        <div class="about-container column is-7">
+                            <div class="about-text ">
+                                <p>当店では太平山名物を初めとした、定食や軽食等を提供致しております。自慢のお料理は焼き鳥・玉子焼定食です。太平山に登山や観光のお客様や栃木市の蔵の街の観光のついでなど、ゆっくりと一息つけるような場を提供致しております。<br> また、太平山だんご、玉子焼、焼き鳥のお持ち帰りも承っております。お電話にて事前にご連絡ください。</p>
+                            </div>
+                        </div>  
+                        <div class="image column is-5">
+                            <img src='@/assets/images/teishoku.png' alt="料理長のご挨拶">
+                            <p>焼き鳥・玉子焼定食 (税込1380円)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <lunchslideshow></lunchslideshow>
         <div class="wrapper60">
             <p class="menu-title has-text-centered">代表的なメニュー</p>
@@ -55,26 +96,6 @@ export default {
     },
     data:function(){
         return{
-            header:{
-                title:'茶屋について',
-                img:require('@/assets/images/lunch_background.png'),
-            },
-            subdatas:[
-                {
-                    title:'観光の合間に一息',
-                    text:'当店では太平山名物を初めとした、定食や軽食等を提供致しております。自慢のお料理は焼き鳥・玉子焼定食です。太平山に登山や観光のお客様や栃木市の蔵の街の観光のついでなど、ゆっくりと一息つけるような場を提供致しております。また、太平山だんご、玉子焼、焼き鳥のお持ち帰りも承っております。お電話にて事前にご連絡ください。',
-                    img:require('@/assets/images/teishoku.png'),
-                    imgtitle:'焼き鳥・玉子焼定食 (税込1380円)'
-                },
-            ],
-            datas:[
-                {
-                    title:'太平山名物をご存知ですか？',
-                    text:'昔、太平山では参拝者はお賽銭ではなくお米を奉納していました。そのお米をだんごとして参拝者に振舞ったことから太平山だんごは生まれました。また、「夜泣き鳥は災いを呼ぶ」と言われており、夜に泣く鶏は神社に奉納されました。奉納された鶏は繁殖をし、それを参拝者に焼き鳥や玉子焼きとして振舞ったことから名物と呼ばれるようになりました。',
-                    img:require('@/assets/images/shiro-dango1.jpeg'),
-                    imgtitle:'太平山名物・だんご'
-                }
-            ],
             mains:[
                 {
                     name:'だんご',
@@ -247,5 +268,89 @@ export default {
 .lunch-wrapper{
     width:100vw;
     overflow:hidden;
+}
+.about-wrapper{
+    .vfor{
+        margin:100px auto;
+    }
+    .main-title{
+        height:300px;
+        overflow:hidden;
+        margin-bottom:100px;
+        position:relative;
+        width:100%;
+        img{
+            width:100%;
+            min-width:990px;
+            min-height:300px;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            position:absolute;
+        }
+        h1{
+            font-size:2.5rem;
+            font-weight:bold;
+            text-align:center;
+            height:300px;
+            line-height:300px;
+            color:white;
+        }
+    }
+    .wrapper-60{
+        width:60%;
+        margin:50px auto;
+        @include md(){
+            width:80%;
+        }
+        @include sp(){
+            width:90%;
+        }
+    }
+    .about-container{
+        @include md(){
+            min-width:400px;
+        }
+        @include lg(){
+            min-width:400px;
+        }
+    }
+    .about-text{
+        p{
+
+        }
+    }
+    .image{
+        @include sp(){
+            margin-top:40px;
+        }
+        img{
+            min-width:250px;
+            max-width:280px;
+            @include sp(){
+                width:150px;
+                margin:auto;
+            }
+        }
+        p{
+            font-weight:bold;
+            font-size:1.2rem;
+            text-align:left;
+            white-space:nowrap;
+            @include sp(){
+                text-align:center;
+            }
+        }
+    }
+    .title{
+        width:100%;
+        font-weight:bold;
+        font-size:2rem;
+        border-bottom:1px solid rgba(0,0,0,0.3);
+        box-shadow:0 5px 10px -10px black;
+    }
+    .center-wrapper{
+        justify-content:space-between;
+    }
 }
 </style>

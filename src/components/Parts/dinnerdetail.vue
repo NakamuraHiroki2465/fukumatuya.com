@@ -4,7 +4,7 @@
             <img src='@/assets/images/fukumatu_food_title.png' alt="メイン背景">
             <h1 class="main-title">会席料理について</h1>
             <div class="site-map">
-              <p><router-link tag="a" to="/" style="color:white;">トップ</router-link>&nbsp;>&nbsp;<router-link tag="a" to="/dinner" style="color:white;">会席料理について</router-link> </p>
+              <p><router-link tag="a" to="/" style="color:white;">トップ</router-link><span>&gt;</span><router-link tag="a" to="/dinner" style="color:white;">会席料理</router-link></p>
             </div>
         </div>
         <div class="wrapper-60">
@@ -13,7 +13,7 @@
                 <div class="center-wrapper flex-wrapper">
                     <div class="about-container">
                         <div class="about-text ">
-                            <p>店主は日比谷・赤坂の懐石料理店で厳しい修行を積んだ板前。直接市場へ出向いて、厳選した食材を仕入れて一から吟味して調理しております。タイトルにあります様に、お客様に五感で料理を楽しんでいただけるよう、どの料理をとっても店主の手作りにこだわり、とにかく美食を追求しております。</p>
+                            <p>店主は日比谷・赤坂の懐石料理店で厳しい修行を積んだ板前。<br>直接市場へ出向いて、厳選した食材を仕入れて一から吟味して調理しております。<br>タイトルにあります様に、お客様に五感で料理を楽しんでいただけるよう、どの料理をとっても店主の手作りにこだわり、とにかく美食を追求しております。</p>
                         </div>
                         <div class="for_next">
                             <div class="detail for_access course ">
@@ -22,23 +22,28 @@
                                     <p class="has-text-centered">コースをみる</p>
                                 </a>
                             </div>
+                            <!--
                             <div class="detail for_access course ">
                                 <a  class="room has-text-centered relative">
                                     <img src="@/assets/images/rightvector.svg" alt="矢印アイコン" class="absolute">
                                     <p class="has-text-centered">お部屋をみる</p>
                                 </a>
                             </div>
+                            -->
                         </div>
-                        <h2 class="title sub">ご相談について</h2>
-                        <p>福松家ではそれぞれのお客様の要望に沿えるよう、できうる限りのご相談に乗ります。まずはお電話から、お気軽にご相談ください。</p>
+                        <h3 class="title sub">ご要望について</h3>
+                        <p>福松家ではそれぞれのお客様の要望に沿えるよう、できうる限りのご相談に乗ります。<br>まずはお電話から、お気軽にご相談ください。</p>
                         <div class="sub-text">
                             <div class="about-text">
+                                <div class="example-title">
+                                   <h4 class="example-title__content">※実際にご要望に沿った例</h4> 
+                                </div>
                                 <div class="example" >
-                                    <p class="subtitle">生物が食べられないお客様</p>
+                                    <p class="subtitle">1.&nbsp;生物が食べられないお客様</p>
                                     <p class="subtext">例：代わりに焼き魚や煮物、火を通した料理を提供いたしました。</p>
                                 </div>
                                 <div class="example">
-                                    <p class="subtitle">病気で食事が制限されている</p>
+                                    <p class="subtitle">2.&nbsp;病気で食事が制限されている</p>
                                     <p class="subtext">例：塩分を抜いた料理を提供いたしました。玉子焼きでは出汁を抜き、焼き鳥はタレをつけず焼くなどを致しました。</p>
                                 </div>
                             </div>
@@ -49,15 +54,15 @@
                             <template v-if="!sp">
                                 <div  class="detail">
                                     <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" >住所</p>
-                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;栃木県栃木市平井町681</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;栃木県栃木市平井町<span class="number-spacing">681</span></p>
                                 </div>
                                 <div  class="detail">
                                     <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name" >電話</p>
-                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;0282-22-1827</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;<span class="number-spacing">0282-22-1827</span></p>
                                 </div>
                                 <div  class="detail">
                                     <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">営業時間</p>
-                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="" >&nbsp;茶屋: 10:00 〜 18:00<br>&nbsp;宴会: 11:00 〜 22:00(要予約)</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="" >&nbsp;茶屋: <span class="number-spacing">10:00 〜 18:00</span><br>&nbsp;宴会: <span class="number-spacing">11:00 〜 22:00</span>&nbsp;(要予約)</p>
                                 </div>
                                 <div  class="detail">
                                     <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">定休日</p>
@@ -65,7 +70,7 @@
                                 </div>
                                 <div  class="detail">
                                     <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">駐車場</p>
-                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;あじさい坂駐車場:約50台<br>&nbsp;店鋪正面:15台ほど</p>
+                                    <p style="white-space:pre-wrap; word-wrap:break-word;" class="">&nbsp;あじさい坂駐車場&nbsp;:&nbsp;約<span class="number-spacing">50</span>台<br>&nbsp;店鋪正面&nbsp;:&nbsp;<span class="number-spacing">15</span>台ほど</p>
                                 </div>
                                 <div  class="detail">
                                     <p style="white-space:pre-wrap; word-wrap:break-word;" class=" info_name">決済方法</p>
@@ -79,8 +84,8 @@
                                 </div>
                                 <div class="reservation">
                                     <p class="phone_index">お問い合わせはこちらまで</p>
-                                    <p class="phone">TEL:0282-22-1827</p>
-                                    <p class="store_time">営業時間 : 10:00〜18:00</p>
+                                    <p class="phone number-spacing">0282-22-1827</p>
+                                    <p class="store_time number-spacing">営業時間 : 10:00〜18:00</p>
                                 </div>
                             </template>
                         </div>
@@ -164,12 +169,6 @@ export default {
         width:100%;
     }
 }
-.about-text{
-    p{
-        font-weight:bold;
-        font-size:1.2rem;
-    }
-}
 .image{
     width:300px;
     @include sp(){
@@ -214,7 +213,8 @@ export default {
 }
 
 .sub{
-    padding-top:50px;
+    padding-top:20px;
+    font-size:1.7em;
 }
 .example{
     padding:15px 10px;
@@ -247,10 +247,12 @@ export default {
 .column-wrapper{
     .detail{
         width:100%!important;
+        padding:5px 0;
     }
 }
 .course{
     height:50px;
+    width:250px;
 }
 .room{
     cursor:not-allowed!important;
@@ -261,5 +263,16 @@ export default {
 .flex-wrapper{
     display:flex;
 }
+.example-title{
 
+    &__content{
+        font-weight:lighter;
+    }
+}
+.sub-text{
+    padding-top:20px;
+}
+.number-spacing{
+    letter-spacing:0.01em;
+}
 </style>

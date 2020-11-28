@@ -4,7 +4,7 @@
         <img src="@/assets/images/enkai-jyou.jpg" alt="お問い合わせ">
         <h1 class="main-title">お問い合わせ</h1>
         <div class="site-map">
-            <p><router-link tag="a" to="/" style="color:white;">トップ</router-link>&nbsp;>&nbsp;<router-link tag="a" to="/contact" style="color:white;">お問い合わせ</router-link></p>
+            <p><router-link tag="a" to="/" style="color:white;">トップ</router-link><span>&gt;</span><router-link tag="a" to="/contact" style="color:white;">お問い合わせ</router-link></p>
         </div>
     </div>
     <div class="wrapper-60">

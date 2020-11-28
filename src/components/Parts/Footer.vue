@@ -77,7 +77,7 @@ footer{
   }
   .footer-wrapper,.footer-menu,.flex-wrap{
     white-space:nowrap;
-    font-family:'はんなり';
+    font-family:'はんなり'!important;
     padding:30px 0 5% 5%!important;
   }
   .footer-wrapper{
@@ -88,15 +88,11 @@ footer{
     }
     h1{
       font-size:2rem;
-      height:2.5rem;
-      line-height:2.5rem;
-      margin-bottom:10px;
+      margin-bottom:20px;
     }
     p{
-      font-size:1.2rem;
-      height:2rem;
-      line-height:2rem;
-
+      font-size:1rem;
+      line-height:1.8;
     }
     a{
       height:3rem!important;
@@ -112,8 +108,9 @@ footer{
   .footer-menu{
     padding:50px 5%;
     h3{
-      margin:0;
+      margin:20px 0 10px 0;
       margin-bottom:10px;
+      font-size:1.2rem!important;
     }
     ul{
       margin:0;
@@ -121,9 +118,8 @@ footer{
       li{
         list-style:none;
         cursor:pointer;
-        height:2rem;
-        line-height:2rem;
         a{
+          font-size:1rem;
           color:white;
           text-decoration:none;
         }

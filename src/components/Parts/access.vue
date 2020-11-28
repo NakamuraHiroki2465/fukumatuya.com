@@ -124,7 +124,7 @@ h4{
         height:auto;
         padding-top:50px;
         padding-bottom:30px;
-        min-width:380px;
+        min-width:340px;
         width:45%;
         @include lg(){
             min-width:380px;

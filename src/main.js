@@ -8,8 +8,6 @@ import App from './App.vue'
 import Topheader from './components/Parts/Header.vue'
 import Topfooter from './components/Parts/Footer.vue'
 import MainPage from './components/MainPage.vue'
-import detail from './components/Parts/detail.vue'
-import subdetail from './components/Parts/subdetail.vue'
 //GlobalなCSSの設定
 import'./assets/globalcss.scss'
 import '../node_modules/bulma/bulma.sass';
@@ -23,8 +21,6 @@ Vue.mixin(GlobalMethod);
 Vue.component('TopHeader',Topheader)
 Vue.component('TopFooter',Topfooter)
 Vue.component('MainPage',MainPage)
-Vue.component('detail',detail)
-Vue.component('subdetail',subdetail)
 
 Vue.use(VueRouter)
 Vue.use(Buefy)
