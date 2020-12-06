@@ -152,7 +152,7 @@
                     </div>
                 </div>
                 <div class = "bento__image">
-                    <img class = "bento__image__content" src = "@/assets/images/bento_3000.jpg" alt = "立田揚げ弁当"/>
+                    <img class = "bento__image__content" src = "@/assets/images/bento_3000.png" alt = "福松弁当"/>
                 </div>
             </div>
         </div>

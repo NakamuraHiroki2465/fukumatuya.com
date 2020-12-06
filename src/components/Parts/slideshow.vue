@@ -40,10 +40,17 @@ export default {
     data:function(){
         return{
             urls:[
+                /**
+                {
+                    src:require('@/assets/images/sousakubento_slideshow.png'),
+                    alt:'福松弁当',
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">お弁当始めました。<p>'
+                },
+                */
                 {
                     src:require('@/assets/images/fukumatu_food.jpg'),
                     alt:'福松家の料理',
-                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">全てが手作りを<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;心行くまで<p>'
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">一品一品に丹精込めた<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;創作料理を心ゆくまで<p>'
                 },
                 {
                     src:require('@/assets/images/yakitori1.png'),
