@@ -25,24 +25,6 @@
             <div class = "bento">
                 <div class = "bento__explain">
                     <div class = "bento__explain__name">
-                        <h2>「あじさい」</h2>
-                    </div>
-                    <div class = "bento__explain__food">
-                        <p class = "bento__explain__food__index">遂に完成しました。会席料理でも使われている素材を用いた特別な創作弁当になります。<br><span class = "red">*ご要望に合わせて創作致します。</span><br><span class ="red">*予約は2日前までにお願い致します。</span></P>
-                        <p class = "bento__explain__food__title">[内容例]</p>
-                        <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/立田揚げ&nbsp;/鱧の南蛮揚げ&nbsp;/胡瓜とカニ詰めの酢の物&nbsp;/車海老の塩焼き&nbsp;/水菜・ウドのきんぴら&nbsp;/野菜の炊き合わせ&nbsp;/草団子&nbsp;/五穀米&nbsp;/</P>
-                    </div>
-                    <div class = "bento__explain__price">
-                        <h3 class = "bento__explain__price__content">2000円<span>(税込み)</span></h3>
-                    </div>
-                </div>
-                <div class = "bento__image">
-                    <img class = "bento__image__content" src = "@/assets/images/sousakubento.png" alt = "創作弁当"/>
-                </div>
-            </div>
-            <div class = "bento">
-                <div class = "bento__explain">
-                    <div class = "bento__explain__name">
                         <h2>スペシャル弁当</h2>
                     </div>
                     <div class = "bento__explain__food">
@@ -153,6 +135,24 @@
                 </div>
                 <div class = "bento__image">
                     <img class = "bento__image__content" src = "@/assets/images/bento_3000.png" alt = "福松弁当"/>
+                </div>
+            </div>
+            <div class = "bento">
+                <div class = "bento__explain">
+                    <div class = "bento__explain__name">
+                        <h2>「あじさい」</h2>
+                    </div>
+                    <div class = "bento__explain__food">
+                        <p class = "bento__explain__food__index">遂に完成しました。会席料理でも使われている素材を用いた特別な創作弁当になります。<br><span class = "red">*ご要望に合わせて創作致します。</span><br><span class ="red">*予約は2日前までにお願い致します。</span></P>
+                        <p class = "bento__explain__food__title">[内容例]</p>
+                        <p class = "bento__explain__food__content">/焼き鳥&nbsp;/玉子焼き&nbsp;/立田揚げ&nbsp;/鱧の南蛮揚げ&nbsp;/胡瓜とカニ詰めの酢の物&nbsp;/車海老の塩焼き&nbsp;/水菜・ウドのきんぴら&nbsp;/野菜の炊き合わせ&nbsp;/草団子&nbsp;/五穀米&nbsp;/</P>
+                    </div>
+                    <div class = "bento__explain__price">
+                        <h3 class = "bento__explain__price__content">2000円<span>(税込み)</span></h3>
+                    </div>
+                </div>
+                <div class = "bento__image">
+                    <img class = "bento__image__content" src = "@/assets/images/sousakubento.png" alt = "創作弁当"/>
                 </div>
             </div>
         </div>

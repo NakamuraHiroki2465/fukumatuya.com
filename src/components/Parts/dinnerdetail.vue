@@ -86,6 +86,7 @@
                                     <p class="phone_index">お問い合わせはこちらまで</p>
                                     <p class="phone number-spacing">0282-22-1827</p>
                                     <p class="store_time number-spacing">営業時間 : 10:00〜18:00</p>
+                                    <p class="time-yoyaku">(会席料理のご予約時のみ22時まで)</p>
                                 </div>
                             </template>
                         </div>
@@ -242,6 +243,9 @@ export default {
     }
     .store_time{
         font-size:1.3rem;
+    }
+    .time-yoyaku{
+        font-size:1rem;
     }
 }
 .column-wrapper{
