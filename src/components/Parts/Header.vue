@@ -23,7 +23,10 @@
                    <!--  <img src="@/assets/images/sakura.png" alt="桜"> -->
                   </p>
                   <p class="time" v-if="!sp">
-                    営業時間&nbsp;:&nbsp;平日 9:00&nbsp;～&nbsp;18:00
+                    営業時間&nbsp;:&nbsp;9:00&nbsp;～&nbsp;18:00
+                  </p>
+                  <p class="time kaiseki" v-if="!sp">
+                    (会席料理のご予約時のみ23時まで)
                   </p>
                 </div>
   
@@ -220,9 +223,7 @@ header{
         }
         h4{
           white-space:nowrap;
-          font-size:1.5rem;
-          line-height:2rem!important;
-          height:2rem!important;
+          font-size:1.3rem;
           margin:0;
           padding-left:10%;
           position:relative;
@@ -239,10 +240,8 @@ header{
         }
         .phonenumber{
           position:relative;
-          font-size:2rem;
+          font-size:1.5rem;
           white-space:nowrap;
-          line-height:3rem;
-          height:3rem;
           margin:0;
           padding-left:10%;
           background:linear-gradient(to right,rgba(192,192,192,0.3),rgba(255,255,255,0.6) 10%,rgba(255,255,255,0.6) 90%,rgba(192,192,192,0.3) );
@@ -267,11 +266,14 @@ header{
           } */
         }
         .time{
-          height:2rem;
+          height:auto;
           padding-left:10%;
           white-space:nowrap;
           position:relative;
           z-index:2;
+        }
+        .kaiseki{
+          font-size:1rem;
         }
       }
       .sub-menu{

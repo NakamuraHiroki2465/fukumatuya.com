@@ -53,7 +53,7 @@
                     <div class="reservation">
                         <p class="phone_index">お問い合わせはこちらまで</p>
                         <p class="phone number-spacing">0282-22-1827</p>
-                        <p class="store_time number-spacing">営業時間 : 10:00〜18:00</p>
+                        <p class="store_time number-spacing">営業時間 : 10:00〜18:00<br v-if ="sp">&nbsp;(会席料理のご予約時のみ23時まで)</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +109,7 @@
             </div>
             <div class="detail columns is-mobile">
                 <p class="column is-3 is-3-mobile  info_name" >営業時間</p>
-                <p class="column is-9 is-8-mobile">9:00&nbsp;〜&nbsp;18:00 <br v-if="sp">(予約時の時間は異なります)</p>
+                <p class="column is-9 is-8-mobile">9:00&nbsp;〜&nbsp;18:00 <br v-if="sp">&nbsp;(会席料理のご予約時のみ23時まで)</p>
             </div>
             <div class="detail columns is-mobile">
                 <p class="column is-3 is-3-mobile  info_name">定休日</p>
@@ -420,9 +420,11 @@ export default {
     border:5px double brown;
     @include lg() {
         width:50%;
+        min-width:600px;
     }
     @include md() {
         width:70%;
+        min-width:600px;
     }
     @include sp() {
         width:90%;
