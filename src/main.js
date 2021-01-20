@@ -25,7 +25,9 @@ Vue.component('MainPage',MainPage)
 Vue.use(VueRouter)
 Vue.use(Buefy)
 Vue.use(vueScrollTo)
+
 const router = new VueRouter({
+  mode: 'history',
   routes,
   scrollBehavior (to, from, savedPosition) {
     if (savedPosition) {
