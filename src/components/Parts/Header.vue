@@ -23,10 +23,10 @@
                    <!--  <img src="@/assets/images/sakura.png" alt="桜"> -->
                   </p>
                   <p class="time" v-if="!sp">
-                    営業時間&nbsp;:&nbsp;9:00&nbsp;～&nbsp;18:00
+                    営業時間&nbsp;:&nbsp;9:00&nbsp;～&nbsp;22:00
                   </p>
                   <p class="time kaiseki" v-if="!sp">
-                    (会席料理のご予約時のみ22時まで)
+                    (茶屋は18時まで。会席料理は要予約)
                   </p>
                 </div>
   

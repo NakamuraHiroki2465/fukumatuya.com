@@ -9,7 +9,7 @@
         <div class="reservation">
             <p class="phone_index">お問い合わせはこちらまで</p>
             <p class="phone">TEL:0282-22-1827</p>
-            <p class="store_time">営業時間 : 10:00〜18:00</p>
+            <p class="store_time">営業時間 : 10:00〜22:00</p>
         </div>
         <div class="toggleBtn">
             <ul class="toggleBtn__wrapper">
