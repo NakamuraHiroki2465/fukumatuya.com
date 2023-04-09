@@ -14,7 +14,7 @@
                     </div>  
                 </div>
                 <div class="sub-menu" v-if="main.relatemenu">
-                    <p class="sub-title sub-text">料理を使ったメニュー</p>
+                    <p class="sub-title sub-text">メニュー</p>
                     <div class="image-wrapper columns">
                         <div class="image column is-4" v-for="relatemenu in main.relatemenu" :key="relatemenu.name">
                             <p class="sub-text" v-text="relatemenu.name"></p>

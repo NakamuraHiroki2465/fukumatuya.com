@@ -32,10 +32,10 @@ export const routes = [
         path:'/contact',
         component: Contact
     },
-    {
-        path:'/recruit',
-        component: Recruit
-    },
+    // {
+    //     path:'/recruit',
+    //     component: Recruit
+    // },
     {
         path:'/bento',
         component: Bento
