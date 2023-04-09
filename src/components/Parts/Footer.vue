@@ -48,11 +48,6 @@ export default {
                 key:4,
                 url:"/contact",
               }
-              // {
-              //   text:"採用情報",
-              //   key:5,
-              //   url:"/recruit"
-              // }
             ]
         }
     }

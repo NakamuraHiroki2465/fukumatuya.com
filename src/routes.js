@@ -4,7 +4,6 @@ import MainPage from './components/MainPage.vue'
 import Contact from './components/contact.vue'
 import About from './components/About.vue'
 import Access from './components/Access.vue'
-import Recruit from './components/recruit.vue'
 import Bento from './components/FoodMenu/bento.vue'
 
 export const routes = [
@@ -32,10 +31,6 @@ export const routes = [
         path:'/contact',
         component: Contact
     },
-    // {
-    //     path:'/recruit',
-    //     component: Recruit
-    // },
     {
         path:'/bento',
         component: Bento
