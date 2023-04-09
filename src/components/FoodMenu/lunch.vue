@@ -19,7 +19,7 @@
                         </div>  
                         <div class="image column is-5">
                             <img src='@/assets/images/shiro-dango1.jpeg' alt="料理長のご挨拶">
-                            <p>太平山名物・だんご（税込み300円）</p>
+                            <p>太平山名物・だんご（税込み350円）</p>
                         </div>
                     </div>
                 </div>
@@ -32,12 +32,12 @@
                     <div class="center-wrapper columns ">
                         <div class="about-container column is-7">
                             <div class="about-text ">
-                                <p>当店では太平山名物を初めとした、定食や軽食等を提供致しております。自慢のお料理は焼き鳥・玉子焼定食です。太平山に登山や観光のお客様や栃木市の蔵の街の観光のついでなど、ゆっくりと一息つけるような場を提供致しております。<br> また、太平山だんご、玉子焼、焼き鳥のお持ち帰りも承っております。お電話にて事前にご連絡ください。</p>
+                                <p>当店では太平山名物を初めとした、定食や軽食等、各種お弁当を店内にて提供致しております。太平山に登山や観光のお客様や栃木市の蔵の街の観光のついでなど、ゆっくりと一息つけるような場を提供致しております。<br> また、太平山だんご、玉子焼、焼き鳥、お弁当のお持ち帰りも承っております。お電話にて事前にご連絡ください。</p>
                             </div>
                         </div>  
                         <div class="image column is-5">
-                            <img src='@/assets/images/teishoku.png' alt="料理長のご挨拶">
-                            <p>焼き鳥・玉子焼定食 (税込1380円)</p>
+                            <img src='@/assets/images/special.png' alt="料理長のご挨拶">
+                            <p>スペシャル弁当 (税込1000円)</p>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ export default {
             mains:[
                 {
                     name:'だんご',
-                    price:'300',
+                    price:'350',
                     text:'太平山の代表的な名物であるだんごを上新粉と水のみで仕上げています。添加物や無駄なものを一切使っておりませんので、日持ちはいたしませんが、上質で味わい深いだんごをお楽しみいただけます。',
                     relatemenu:false,
                     img:require('@/assets/images/dango-pic.png'),
@@ -107,7 +107,7 @@ export default {
                 },
                 {
                     name:'玉子焼',
-                    price:'350',
+                    price:'380',
                     text:'門外不出の出汁を使用したふわふわであまじょっぱい風味の玉子焼きをお楽しみいただけます。',
                     img:require('@/assets/images/tamago-pic.png'),
                     alt:'玉子焼きイラスト',
@@ -125,7 +125,7 @@ export default {
                 },
                 {
                     name:'焼き鳥',
-                    price:'540',
+                    price:'570',
                     text:'長年に渡り、つけたし守り続けられた秘伝のたれをご堪能できます。栃木鳥の百日雛と呼ばれる雛鳥を使用しており、柔らかく味のしっかりとついた焼き鳥を是非ご賞味ください。',
                     img:require('@/assets/images/yakitori-pic.png'),
                     alt:'焼き鳥イラスト',
