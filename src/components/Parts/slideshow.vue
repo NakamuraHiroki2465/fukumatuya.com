@@ -53,6 +53,11 @@ export default {
                     title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">一品一品に丹精込めた<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;創作料理を心ゆくまで<p>'
                 },
                 {
+                    src:require('@/assets/images/zaisu/zaisu_four.jpg'),
+                    alt:'座椅子入れました',
+                    title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;right:2.5%;transform:translate(-50%,-50%);height:100%;padding-top:5%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">座椅子入れました<p>'
+                },
+                {
                     src:require('@/assets/images/yakitori1.png'),
                     alt:'太平山名物焼き鳥',
                     title:'<p style="font-size:2rem!important;color:white;position:absolute;top:50%;left:2.5%;transform:translate(50%,-50%);height:100%;padding-top:10%;z-index:100;writing-mode:vertical-rl;font-weight:lighter!important;">秘伝のタレを使用<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;絶品の焼き鳥に舌鼓<p>'
