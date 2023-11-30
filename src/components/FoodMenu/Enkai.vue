@@ -2,20 +2,26 @@
     <div class="dinner-wrapper">
         <!--ページトップ部分-->
         <dinnerdetail :header="header" :datas="datas"></dinnerdetail>
-        <!--ページのメインの部分-->
-        <dinnermenu :datas="dinnermenu"></dinnermenu>
-        <!--
-        <div class="room">
-            <div class="room__title__container">
-                <h2 class="room__title">
-                    個室のご案内
-                </h2>
+        <div class="wrapper-50">
+            <h2 class="text-4xl">個室のご案内</h2>
+            <br>
+            <p>当店のお部屋は完全個室となっております。そのため、他のお客様を気にすることなく、ゆったりとお食事をお楽しみいただけます。</p>
+            <br>
+            <div class="my-4 pt-4">
+                <p class="text-xl mb-4 pb-4 border-bottom">2〜4人でご利用の場合のイメージ</p>
+                <img class="max-w-full" src="@/assets/images/zaisu/zaisu_four.jpg" alt="座椅子4人用">
             </div>
-            <div class="room__content__container">
-                <p>当店のお部屋は完全個室となっております。そのため、他のお客様を気にすることなく、ゆったりとお食事をお楽しみいただけます。また、カラオケも設置しております。</p>
+            <div class="my-4 pt-4"> 
+                <p class="text-xl mb-4 pb-4 border-bottom">6〜8人でご利用の場合のイメージ</p>
+                <img class="max-w-full" src="@/assets/images/zaisu/zaisu_eight.jpg" alt="座椅子8人用">
+            </div>
+            <div class="my-4 pt-4"> 
+                <p class="text-xl mb-4 pb-4 border-bottom">大人数でのご利用の場合のイメージ</p>
+                <img class="max-w-full" src="@/assets/images/zaisu/zaisu_large.jpg" alt="座椅子大人数用">
             </div>
         </div>
-        -->
+        <!--ページのメインの部分-->
+        <dinnermenu :datas="dinnermenu"></dinnermenu>
     </div>
 </template>
 <script>
@@ -97,6 +103,25 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@import '@/assets/variables.scss';
+.wrapper-50{
+    margin:50px auto;
+    width:50%;
+    @include lg(){
+         min-width:850px;
+    }
+    @include md(){
+        width:80%;
+         min-width:850px;
+    }
+    @include sp(){
+        width:90%;
+    }
+}
+.border-bottom {
+    border-bottom:1px solid rgba(0,0,0,0.3);
+    box-shadow:0 5px 10px -10px black;
+}
 .dinner-wrapper{
     overflow:hidden;
     width:100vw;
