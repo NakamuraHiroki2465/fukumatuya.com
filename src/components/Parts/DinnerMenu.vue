@@ -1,7 +1,6 @@
 <template>
     <div class="wrapper-50" id="menu">
         <h2 class="text-4xl">お料理について</h2>
-        <br>
         <div class="vfor" v-for="(data) in this.datas" :key="data.title">
             <div class="vfor_container">
                     <h2  class="text-3xl mb-4" v-text="data.title"></h2>
@@ -37,7 +36,7 @@ export default {
 @import '@/assets/variables.scss';
 .vfor{
     width:100%;
-    padding:50px 0;
+    padding:30px 0 50px 0;
 }
 .vfor_container{
     margin:0 auto;
