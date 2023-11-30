@@ -1,42 +1,28 @@
 <template>
-    <div class="about-wrapper" id="menu">
-        <div class="vfor" v-for="(data) in this.datas" :key="data.title" :style="data.menu_style">
-            <div class="wrapper-60">
-                <div class="vfor_container">
-                    <h2  class="title" v-text="data.title"></h2>
-                    <div class="center-wrapper columns">
-                        <div class="about-container column is-6">
-                            <div class="about-text ">
+    <div class="wrapper-50" id="menu">
+        <h2 class="text-4xl">お料理について</h2>
+        <br>
+        <div class="vfor" v-for="(data) in this.datas" :key="data.title">
+            <div class="vfor_container">
+                    <h2  class="text-3xl mb-4" v-text="data.title"></h2>
+                    <div class="center-wrapper">
+                        <div class="about-container">
+                            <div class="about-text">
                                 <p class="menu-explain" v-text="data.text"></p>
                             </div>
-                            <p class="price-title columns">コース料金</p>
-                            <div class="price_info_list" v-for="menu in data.menu" :key="menu.price">
-                                <p class="price">{{menu.price}}</p>
-                            </div>
                         </div>  
-                        <div class="image-container column is-6">
+                        <div class="image-container">
                             <div class="image-wrapper">
                                 <div class="cp_cssslider">
-                                    <!--
-                                    <input type="radio" :name="data.title" :id="data.alt + index" checked/>
-                                    <label :for="data.alt + index"><img :src="data.img" /></label>
-                                    -->
                                     <img :src="data.img" />
-                                    
-                                    <!--
-                                    <input type="radio" :name="data.title" :id="data.alt + 2"/>
-                                    <label :for="data.alt + 2"><img :src="data.img" /></label>
-                                    <img :src="data.img" />
-                                    <input type="radio" :name="data.title" :id="data.alt + 3"/>
-                                    <label :for="data.alt + 3"><img :src="data.img" /></label>
-                                    <img :src="data.img" />
-                                    -->
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <p class="price">コース料金 : {{data.menu.price}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </template>
@@ -49,9 +35,6 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '@/assets/variables.scss';
-.wrapper-60{
-    margin:0 auto!important;
-}
 .vfor{
     width:100%;
     padding:50px 0;
@@ -81,9 +64,9 @@ export default {
         color:white;
     }
 }
-.wrapper-60{
-    width:60%;
-    margin:50px auto;
+.wrapper-50{
+    width:50%;
+    margin:80px auto 30px auto!important;;
     @include md(){
         width:80%;
     }
@@ -147,13 +130,12 @@ export default {
 .image-wrapper{
     overflow:hidden;
     margin:auto;
-    width:400px;
     .sub{
         width:120px;
         margin-right:10px;
     }
     .main{
-        width:400px;
+        width:450px;
         
     }
 }
@@ -176,19 +158,9 @@ export default {
 box-sizing: border-box;
 }
 .cp_cssslider {
-width: 300px;
-padding-top: 150px; /* 画像の高さ */
-position: relative;
-margin: 2em auto;
+padding-top: 20px;
+margin: 1em auto;
 text-align: center;
-}
-.cp_cssslider > img {
-position: absolute;
-left: 0;
-top: 0;
-transition: all 0.5s;
-border-radius: 3px;
-/* box-shadow:0px 0px 5px 0px rgba(0,0,0,0.3); */
 }
 .cp_cssslider input{
 display: none;
