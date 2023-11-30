@@ -8,7 +8,7 @@
             <p class="Tel">0282-22-1827</p>
             <a  href="https://www.instagram.com/fukumatuya_29028/">
               Instagram
-              <img src="@/assets/images/instagram.svg" alt="インスタグラム">
+              <img class='inline' src="@/assets/images/instagram.svg" alt="インスタグラム">
             </a>
         </div>
         <div class="footer-menu column is-3 is-12-mobile has-text-centered-mobile">
