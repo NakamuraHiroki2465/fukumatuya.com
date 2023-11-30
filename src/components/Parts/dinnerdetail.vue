@@ -7,7 +7,7 @@
               <p><router-link tag="a" to="/" style="color:white;">トップ</router-link><span>&gt;</span><router-link tag="a" to="/dinner" style="color:white;">会席料理</router-link></p>
             </div>
         </div>
-        <div class="wrapper-60">
+        <div class="wrapper-50">
             <div class="vfor">
                 <h2  class="title"><span style="font-size:2rem!important;">見・香・味</span>&nbsp;全てを堪能する</h2>
                 <div class="center-wrapper flex-wrapper">
@@ -22,14 +22,6 @@
                                     <p class="has-text-centered">コースをみる</p>
                                 </a>
                             </div>
-                            <!--
-                            <div class="detail for_access course ">
-                                <a  class="room has-text-centered relative">
-                                    <img src="@/assets/images/rightvector.svg" alt="矢印アイコン" class="absolute">
-                                    <p class="has-text-centered">お部屋をみる</p>
-                                </a>
-                            </div>
-                            -->
                         </div>
                         <h3 class="title sub">ご要望について</h3>
                         <p>福松家ではそれぞれのお客様の要望に沿えるよう、できうる限りのご相談に乗ります。<br>まずはお電話から、お気軽にご相談ください。</p>
@@ -143,9 +135,9 @@ export default {
         width:100%;
     }
 }
-.wrapper-60{
+.wrapper-50{
     margin:50px auto;
-    width:60%;
+    width:50%;
     @include lg(){
          min-width:850px;
     }
