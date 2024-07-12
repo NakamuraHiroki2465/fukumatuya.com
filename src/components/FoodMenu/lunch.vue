@@ -107,13 +107,13 @@ export default {
                 },
                 {
                     name:'玉子焼',
-                    price:'380',
+                    price:'400',
                     text:'門外不出の出汁を使用したふわふわであまじょっぱい風味の玉子焼きをお楽しみいただけます。',
                     img:require('@/assets/images/tamago-pic.png'),
                     alt:'玉子焼きイラスト',
                     relatemenu:[
                         {
-                            name:'玉子焼き（単品) 380円',
+                            name:'玉子焼き（単品) 400円',
                         },
                         // {
                         //     name:'玉子焼き定食 750円',
@@ -125,20 +125,14 @@ export default {
                 },
                 {
                     name:'焼き鳥',
-                    price:'570',
+                    price:'630',
                     text:'長年に渡り、つけたし守り続けられた秘伝のたれをご堪能できます。栃木鳥の百日雛と呼ばれる雛鳥を使用しており、柔らかく味のしっかりとついた焼き鳥を是非ご賞味ください。',
                     img:require('@/assets/images/yakitori-pic.png'),
                     alt:'焼き鳥イラスト',
                     relatemenu:[
                         {
-                            name:'焼き鳥（単品) 570円',
-                        },
-                        // {
-                        //     name:'焼き鳥定食 940円',
-                        // },
-                        // {
-                        //     name:'焼き鳥玉子焼き定食 1380円',
-                        // }
+                            name:'焼き鳥（単品) 630円',
+                        }
                     ]
                 },
             ],
@@ -149,11 +143,11 @@ export default {
                 },
                 {
                     name:'焼き鳥',
-                    price:'570',
+                    price:'630',
                 },
                 {
                     name:'玉子焼',
-                    price:'380',
+                    price:'400',
                 },
                 {
                     name:'柚子みそおでん',
@@ -169,69 +163,69 @@ export default {
                 },
                 {
                     name:'肉じゃが',
-                    price:'400',
+                    price:'500',
                 },
                 {
                     name:'もつ煮',
-                    price:'500',
+                    price:'550',
                 },
-                // {
-                //     name:'焼き鳥定食',
-                //     price:'940',
-                // },
-                // {
-                //     name:'鳥めし',
-                //     price:'940',
-                // },
-                // {
-                //     name:'玉子焼定食',
-                //     price:'750',
-                // },
-                // {
-                //     name:'焼き鳥玉子焼定食',
-                //     price:'1380',
-                // },
                 {
                     name:'カレーライス',
                     price:'650',
                 },
                 {
+                    name: 'チーズキャンドル',
+                    price: '600',
+                },
+                {
                     name:'山菜そば',
-                    price:'600',
+                    price:'650',
                 },
                 {
                     name:'山菜うどん',
-                    price:'600',
+                    price:'650',
                 },
                 {
                     name:'なめこそば',
-                    price:'600',
+                    price:'650',
                 },
                 {
                     name:'なめこうどん',
-                    price:'600'
+                    price:'650'
                 }
             ],
             drinks:[
                 {
-                    name:'ビール',
+                    name:'ビール(瓶)',
                     price:'700'
                 },
                 {
+                    name:'ビール(缶)',
+                    price:'400'
+                },
+                {
                     name:'レモンハイ',
-                    price:'420',
+                    price:'450',
+                },
+                {
+                    name:'ハイボール',
+                    price:'550',
                 },
                 {
                     name:'コーラ',
-                    price:'210',
+                    price:'250',
                 },
                 {
                     name:'ジュース各種',
-                    price:'210'
+                    price:'250'
                 },
                 {
                     name:'お酒各種',
                     price:'450'
+                },
+                {
+                    name:'冷酒(高清水)',
+                    price:'700'
                 }
             ]
         }
